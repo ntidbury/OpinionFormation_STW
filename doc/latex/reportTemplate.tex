@@ -155,14 +155,16 @@ The effect is shown in figures \ref{fig:muwithoutextremists} and \ref{fig:muwith
 
 
 \subsection{Cluster building}
-According to \cite{Minor}, such a society of N agents with random uniform distributed opinions $x_i$ in [0,1] will converge to a common opinion around 0.5 if the communicating interval $u$ of agents communicating with each other is big enough, more precise if $u>0.3$. This was repeated and shown in figure \ref{fig:uwithoutextremists}.
+According to \cite{Minor}, such a society of N agents with random uniform distributed opinions $x_i$ in [0,1] will converge to a common opinion around 0.5 if the communicating interval $u$ of agents communicating with each other is big enough, more precise if $u>0.3$. This was repeated and shown in figure \ref{fig:uwithoutextremists}. \\
 
 \begin{figure}[!htb]
 \center
   \includegraphics[width=0.7\linewidth]{gen_plot_intervall_2017121418231461579e+01.png}
-  \caption{Percentage of the society fraction of all of opinion around central cluster}
+  \caption{Percentage of the central cluster when varying $\mu$}
   \label{fig:uwithoutextremists}
 \end{figure}
+
+In case $\mu = 0$, there is no opinion change between the agents and the uniform distribution of the opinions gives us the percentage $\frac{|0.45-0.50|}{1} = 10\%$. For values of $\mu$ between 0.1 and 0.2 we see that almost no opinion are between 0.45 and 0.5. This corresponds to the fact that the opinion converge against two opinions that are around 0.25 and 0.75. If $\mu > 0.28$ we see almost 100\% in this cluster. This is the main result of this chapter and is defined as the convergence against a common opinion around 0.5.
 
 \section{A world with extremists}
 The society model described above is being extended to a society with extreme opinion individuals who can influence the agents. We carry on to vary different parameters in this society model.
@@ -255,8 +257,10 @@ Question: For T tending to infinity and iteration of with and without, what are 
 \section{Discussion}
 a typical discussion... what was good/bad? Problems? Interpretation of our simulation results? Limits of the model?
 
+Our result for the convergence of the opinions is u>0.28. In the paper it was u>0.3.
+
 \section{Summary and Outlook}
-Until now we considered only symmetric random distributions and symmetric distribution of extremists. What is gonna happen if this will be asymmetric?
+Until now we considered only symmetric random distributions and symmetric distribution of extremists. What is gonna happen if this will be asymmetric? What would be the interpretation? What is interesting in these cases?
 
 
 If we do no Gaussian distribtion: a normal distribution is a sensible alternative opinion distribution where 0.5 is the main stream opinion and other opinions are spreaded around the main stream distribution. Sigma would be measure for 'how far' the other opinions are spreaded from the main stream opinion.

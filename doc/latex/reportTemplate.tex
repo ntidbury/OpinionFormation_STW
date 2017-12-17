@@ -7,6 +7,8 @@
 \usepackage{color}
 \usepackage{subcaption} 
 
+\usepackage{pdfpages}
+
 \usepackage{graphicx}
 \usepackage{amssymb}
 \usepackage{epstopdf}
@@ -81,6 +83,8 @@ individuals onto a society that typically converges to one opinion}
 % IMPORTANT
 % you MUST include the ETH declaration of originality here; it is available for download on the course website or at http://www.ethz.ch/faculty/exams/plagiarism/index_EN; it can be printed as pdf and should be filled out in handwriting
 
+\includepdf{declaration-originality.pdf}
+
 
 %%%%%%%%%% Table of content %%%%%%%%%%%%%%%%%
 
@@ -93,25 +97,22 @@ individuals onto a society that typically converges to one opinion}
 
 
 \section{Abstract}
+For millennia, society has consisted of many opinions and points of view. In some cases, these opinions have been oppressed, other opinions have been forced onto societies, others brainwashed. Within a democracy, these opinions are given space to spread, to change and to evolve and yet: they still converge into a general opinion. How is this possible in cases of extremism, where extreme opinions are so different compared to the majority? What effect do extreme opinions, such as that of the IS, Charles Manson and Co. have on a converging opinion of a society? We would like to examine how extreme opinions of individuals impacts such a society, and under what circumstances these opinions can have a wide-spread effect.
+
 
 \section{Introduction and Motivations}
-For millennia, society has consisted of many opinions and points of view. In some cases, these opinions have been oppressed, other opinions have been forced onto societies, others brainwashed. Within a democracy, these opinions are given space to spread, to change and to evolve and yet: they still converge into a general opinion. How is this possible in cases of extremism, where extreme opinions are so different compared to the majority? What effect do extreme opinions, such as that of the IS, Charles Manson and Co. have on a converging opinion of a society? We would like to examine how extreme opinions of individuals impacts such a society, and under what circumstances these opinions can have a wide-spread effect. \\*
-Basing on the papers of Holme and Newman \cite{Coevolutions} such as Laguna, Abramson and Zanette \cite{Minor}, a socienty of opinions in the range [0,1] converges against an average opinion 0.5 if the parameters are set accordingly. To make it easier, we started from that situation and added the extreme opinion people in order to see how it affects the outcome. \\*
-Our questions are basically the following: 
-\begin{itemize}
-\item What are the outcomes of n convincing individuals of extreme opinions in a society that converges to one opinion? Do we see fragmentation or polarisation of opinions?
-\item What effects do these extreme opinions have in a society of low $u$ [narrow communicating interval] and $\mu$ [weight of foreign opinions]?
-\item What happens when we vary the random distribution?
-\end{itemize}
+Basing on the papers of Holme and Newman \cite{Coevolutions} such as Laguna, Abramson and Zanette \cite{Minor}, we create a society on an agent-based model. These agents being single beings with an opinion in the continuous interval [0,1]. Each agent possesses a parameter $\mu$, which is the weight the agent gives to foreign opinions. Agents of the society will interact with each other, "exchanging" their opinions and deciding on common ground. This "common ground" both agents share is defined if within a distance u. If the parameters are set accordingly, we expect that the opinion converges against an average opinion 0.5. First, we implement this model and investigate the parameters to reproduce some results of the papers.
+
+Next, we extend the model with extreme opinions. They are defined by an opinion of 0 or 1 and have special properties which one can summarize in 2 parameters. One will be called $n_{conv}$ and characterize the the number of convinced agents per time step. The other one $infop$ characterizes the range of influenced opinions. Within this report, we will discuss the extension and its consequences. We will focus on societies that typically converge against a common opinion and investigate the stability of the convergence when inserting the extremists.
 
 
 \section{Model and Implementation}
 \subsection{Society agent in a single time step}
 We have set a society of $N$ agents with opinions $x_i \in [0,1]$, $i \in \{1, N \}$. Initially the distribution of opinions is uniform, which means that all opinions are equally alike.
 
-We further define the parameter of a threshold of communication $u$. So agents interact with each other only if their difference in opinion is smaller than this threshold. In \cite{Minor} this is introduced as the "bounded confidence" which corresponds to the fact that people tend to spend time with agents with similar opinion, for instance circle of friends tend to be of similar opinion. By building a threshold u into the structure, the agents only interact with similar-thinking agents, as people generally interact with the like-minded. A big $u$ therefore corresponds to open-minded society agents which interact with people of an opinion "further away".
+We further define the parameter of a threshold of communication $u$. The agents interact with each other only if their difference in opinion is smaller than this threshold. In \cite{Minor} this is introduced as the "bounded confidence" which corresponds to the fact that people tend to spend time with agents with similar opinion, for instance circle of friends tend to be of similar opinion. By building a threshold u into the structure, the agents only interact with similar-thinking agents, as people generally interact with the like-minded. A big $u$ therefore corresponds to open-minded society agents which interact with people of an opinion "further away".
 
-The second parameter is the $\mu$, which represents the weight on other opinions of each society agent. When two agents interact with each other they mutually adapt their opinion to some opinion in the middle. \\
+The second parameter of the society agents is the $\mu$, which represents the weight on other opinions. When two agents interact with each other, they mutually adapt their opinion to some opinion in the middle of both. \\
 
 The concrete implementation as in \cite{Minor} looks as follows:
 \begin{equation}
@@ -121,53 +122,45 @@ x'(t+1) &= x'(t) + \mu(x(t) - x'(t))
 \end{aligned}
 \end{equation}
 
-Note that only weight adjustments $0 < \mu < 1$ are allowed to guarantee that the opinions after are between the two initial opinions and that the values do not exceed the range of [0,1]. A negative value would mean that opinion of the two agents would develop in the opposite direction of opinion. \\*
+Note that only weight adjustments $0 < \mu < 1$ are allowed to guarantee that the opinions after are between the two initial opinions and that the values do not exceed the range of [0,1]. Next to the technical fact, a negative value would mean that the opinions of the two agents would develop in the opposite direction of opinion and a value bigger than 0.5 would mean that x' will be closer to the opinion of x than x itself after the interaction. \\*
 A characteristic property of this model is the fact that close opinions come even closer and opinions further away from each other do not influence each other, whereby "close" and "far-away" are defined by $u$. \\*
-Up to now we have defined under which threshold two agents meet and under which weight they exchange their opinion. The next point is to define a single time step in such a way that every agent randomly chooses another agent within the society and the threshold of communication $u$ to interact with him as described above. Then we iterate over the $T$ time steps to get the final update of opinions.
+Up to now we have defined under which threshold two agents meet and under which weight they exchange their opinion. Next, we define a single time step in such a way that every agent randomly chooses another agent within the society and the threshold of communication $u$ to interact with him as described above. Then we iterate over the $T$ time steps to get the final update of opinions. \\*
 As concluded in \cite{Minor}, first of all the parameters $\mu$ and $T$ are related in such a way that the results at given $u$ do not vary if by reducing one the other has to be increased. If moreover a high enough value of $u$ = 0.3 or greater as a communication threshold is chosen, the society's opinion converges to a unique opinion around $x$ = 0.5.
 
 \subsection{Extremists}
-Basing on the setting of society of interacting agents with the three parameters $u$, $\mu$ and $T$ of the last chapter we add extreme individuals of non-changing opinion on each of the outskirts of the opinion range at 0 and 1. They represent charismatic individuals of good rhetorics able to convince a lot of people on their opinion, such as social media stars or politicians with extreme opinions. \\*
+Basing on the setting of society of interacting agents with the three parameters $u$, $\mu$ and $T$ of the last chapter we add extreme individuals of non-changing opinion on each of the outskirts of the opinion range at 0 and 1. They represent charismatic individuals of good rhetoric able to convince many people on their opinion, such as social media stars or politicians with extreme opinions. \\*
 This is implemented with the following parameters for each of the two sides: At each time step the $n$ extreme opinion individuals can persuade $p$ other agents by a probability of success of $\kappa$ each, but again only within a threshold of communication, this time called $infop$. \\*
-So here we seemingly add four new parameters to $u$, $\mu$ and $T$, but in fact there are some correlations, just as there were correlations between $\mu$ and $T$ in the case without extremists.
-Firstly, we have an effective number of persuaded people in each time step of $n_{eff} = n \cdot p$ that and that can be united as one parameter. Secondly, this again then can be united to $n_{conv}$ = $\kappa \cdot n_{eff}$, under {\color{red}the constraint that we have high enough numbers such that statistical averages take place}. \\*
-So in the end we have only two additional parameters $n_{conv}$ and $infop$ in the case of the society with extremist, with a total of five parameters of $u$, $\mu$, $T$, $n_{conv}$ and $infop$.
+We seemingly add four new parameters. However, in fact there are some correlations.
+First, we have an effective number of persuaded people in each time step of $n_{eff} = n \cdot p$ that can be united as one parameter. Secondly, this again then can be united to $n_{conv}$ = $\kappa \cdot n_{eff}$, under the constraint that we have large numbers such that statistical averages take place. \\*
+In the end we have only two additional parameters. $n_{conv}$, which defines the amount of influenced people and $infop$ which defines the range of influence and remained as before.
 
 \section{A world without extremists}
-In order to keep things easier, we started the simulations with a society without extremists converting against a common opinion around $x$ = 0.5. We therefore first had to code a situation as given in \cite{Minor} in order to reproduce the results.
+For deeper understanding and for having references to later cases we started the simulations with a society without extremists. Therefore, we coded situations as given in \cite{Minor} in order to reproduce their results.
 
-\subsection{The weight \texorpdfstring{$\mu$}{TEXT} gives the speed of convergence, but has no influence on result}
-We reproduce the fact, that $\mu$ only acts as a parameter of convergence, and that in the case of a constant $u$ a small $\mu$ has to be compensated with a high number of time steps $T$ and that the results are the same apart from that (See figures \ref{fig:muwithoutextremists} and \ref{fig:muwithoutextremists2}).
+\subsection{Speed of convergence}
+We reproduce the fact, that $\mu$ acts as a parameter of convergence. In case of constant $u$, a small $\mu$ has to be compensated with a large number of time steps $T$. The resulting stable state, defined by T running against infinity, will be the same.
+
+The effect is shown in figures \ref{fig:muwithoutextremists} and \ref{fig:muwithoutextremists2}. We investigated the time evolution of 2 societies which have the same properties excepted for the value of $\mu$. One can see that for a large number of time steps ($T=200$) both societies ends in a common opinion around 0.5. However, for small time steps one can see differences. The society with the smaller $\mu$ value ($\mu = 0.03$) is still more wide-spreaded than the society with the bigger $\mu$ value ($\mu = 0.3$). This corresponds to the effect described above.
 
 \begin{figure}[!htb]
-\minipage{0.48\textwidth}
+\minipage{0.5\textwidth}
   \includegraphics[width=\linewidth]{gen_plot_2017121418225017531e+01.png}
 \endminipage\hfill
-\minipage{0.48\textwidth}
+\minipage{0.5\textwidth}
   \includegraphics[width=\linewidth]{gen_plot_2017121418224358724e+01.png}
 \endminipage
-\caption{Opinion spread for different times for a given $\mu$ of 0.03 or 0.2 and $u = 0.3$}
+\caption{Opinion distribution for different times for a given $\mu$ of 0.03 or 0.2. We fixed the number of society agents $N = 1000$ and the threshold $u = 0.3$}
 \label{fig:muwithoutextremists}
 \end{figure}
 
-\begin{figure}
-\center
- \includegraphics[width=0.6\linewidth]{gen_plot_2017121418225354249e+01.png}
-\caption{Opinion spread for different times for a given $\mu$ of 0.3 and $u = 0.3$}
-\label{fig:muwithoutextremists2}
-\end{figure}
 
-
-
-
-
-\subsection{The threshold u defines the cluster building}
-According to \cite{Minor}, such a society of N agents with random uniform distributed opinions $x_i$ in [0,1] will converge to a common opinion around 0.5 if the comunicating interval $u$ of agents communicating with each other is big enough, more precise if $u>0.3$. This was repeated and shown in figure  \ref{fig:uwithoutextremists}.
+\subsection{Cluster building}
+According to \cite{Minor}, such a society of N agents with random uniform distributed opinions $x_i$ in [0,1] will converge to a common opinion around 0.5 if the communicating interval $u$ of agents communicating with each other is big enough, more precise if $u>0.3$. This was repeated and shown in figure \ref{fig:uwithoutextremists}.
 
 \begin{figure}[!htb]
 \center
-\caption{Fraction of all of opinion around central cluster}
-  \includegraphics[width=0.6\linewidth]{gen_plot_intervall_2017121418231461579e+01.png}
+  \includegraphics[width=0.7\linewidth]{gen_plot_intervall_2017121418231461579e+01.png}
+  \caption{Percentage of the society fraction of all of opinion around central cluster}
   \label{fig:uwithoutextremists}
 \end{figure}
 

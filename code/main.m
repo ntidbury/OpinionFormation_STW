@@ -3,7 +3,7 @@
 %% author: The Opinionators (Elisa Wall, Alexander Stein, Niklas Tidbury)
 
 %% number of time steps
-T = 45;
+T = 1000;
 
 %% number of iterations
 Tg = 50;
@@ -19,7 +19,7 @@ u = 0.32;
 % Mu defines the change of opinion when two agents speak with each other
 % mu has to be between 0 and 1 to ensure that all opinions are 
 % opinions are between 0 and 1.
-mu = 0.2;
+mu = 0.1;
 
 
 %% Properties of the extremists
@@ -27,22 +27,36 @@ mu = 0.2;
 n0 = 1;
 n1 = 1;
 % number of agents one extremist can reach
-p0 = 10;
-p1 = 10;
+p0 = 5;
+p1 = 5;
 % An extremist convinces an agent with probability kappa
 kappa0 = 0.2;
 kappa1 = 0.2;
 % an extremist has a range of people he reaches
 % The extremist with opinion 0 can reach all agents with opinion in 
 % [0,infop0], repectively extremists with opinion 1 to [infop1, 1] 
-infop0 = 0.3;
-infop1 = 0.7;
+infop0 = 0.1;
 
 
 %% run the program
 
-op = create(N);
-gen_plot("hist", false, 3, run_simulation("without", op, Tg, T, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, infop0, infop1), "µ = 0.2", "Opinion", "Number of Agents", T, N, true);
+
+gen_plot("hist", false, 1, run_simulation("with", create(N), Tg, T, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, infop0, 1-infop0), "infop = 0.1", "Opinion", "Number of Agents", T, N, true);
+
+infop0 = 0.2;
+gen_plot("hist", false, 1, run_simulation("with", create(N), Tg, T, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, infop0, 1-infop0), "infop = 0.2", "Opinion", "Number of Agents", T, N, true);
+
+infop0 = 0.3;
+gen_plot("hist", false, 1, run_simulation("with", create(N), Tg, T, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, infop0, 1-infop0), "infop = 0.3", "Opinion", "Number of Agents", T, N, true);
+
+infop0 = 0.4;
+gen_plot("hist", false, 1, run_simulation("with", create(N), Tg, T, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, infop0, 1-infop0), "infop = 0.4", "Opinion", "Number of Agents", T, N, true);
+
+infop0 = 0.5;
+gen_plot("hist", false, 1, run_simulation("with", create(N), Tg, T, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, infop0, 1-infop0), "infop = 0.5", "Opinion", "Number of Agents", T, N, true);
+
+
+%{
 op = create(N);
 gen_plot("hist", false, 3, run_simulation("without", op, Tg, T, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, infop0, infop1), "µ = 0.2", "Opinion", "Number of Agents", T, N, true);
 op = create(N);
@@ -52,7 +66,8 @@ gen_plot("hist", false, 3, run_simulation("without", op, Tg, T, N, u, mu, n0, p0
 
 mu = 0.03;
 T = 200;
-
+%}
+%{
 op = create(N);
 gen_plot("hist", false, 3, run_simulation("without", op, Tg, T, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, infop0, infop1), "µ = 0.03", "Opinion", "Number of Agents", T, N, true);
 op = create(N);
@@ -64,7 +79,8 @@ gen_plot("hist", false, 3, run_simulation("without", op, Tg, T, N, u, mu, n0, p0
 
 mu = 0.3;
 T = 30;
-
+%}
+%{
 op = create(N);
 gen_plot("hist", false, 3, run_simulation("without", op, Tg, T, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, infop0, infop1), "µ = 0.3", "Opinion", "Number of Agents", T, N, true);
 op = create(N);
@@ -75,12 +91,12 @@ op = create(N);
 gen_plot("hist", false, 3, run_simulation("without", op, Tg, T, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, infop0, infop1), "µ = 0.3", "Opinion", "Number of Agents", T, N, true);
 
 %gen_plot("hist", true, 1, run_simulation("with", op, Tg, T, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, infop0, infop1), "Percentages", "Time", "Percentage of Extreme", T, N, false);
+%}
 
-
-gen_plot_interval("line", "% of opinion between 0.45 and 0.55", "µ", "Percentage", true, "without", "u", create(N), Tg, T, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, infop0, infop1);
-gen_plot_interval("line", "% of opinion between 0.45 and 0.55", "µ", "Percentage", true, "without", "u", create(N), Tg, T, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, infop0, infop1);
-gen_plot_interval("line", "% of opinion between 0.45 and 0.55", "µ", "Percentage", true, "without", "u", create(N), Tg, T, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, infop0, infop1);
-gen_plot_interval("line", "% of opinion between 0.45 and 0.55", "µ", "Percentage", true, "without", "u", create(N), Tg, T, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, infop0, infop1);
+%gen_plot_interval("line", "% of opinion between 0.45 and 0.55", "µ", "Percentage", false, "without", "u", create(N), Tg, T, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, infop0, 1-infop0);
+%gen_plot_interval("line", "% of opinion between 0.45 and 0.55", "µ", "Percentage", true, "without", "u", create(N), Tg, T, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, infop0, infop1);
+%gen_plot_interval("line", "% of opinion between 0.45 and 0.55", "µ", "Percentage", true, "without", "u", create(N), Tg, T, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, infop0, infop1);
+%gen_plot_interval("line", "% of opinion between 0.45 and 0.55", "µ", "Percentage", true, "without", "u", create(N), Tg, T, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, infop0, infop1);
 
 %gen_av_plot("without", 2, "hist", "Average of agent opinions over Tg = 10", "Opinion", "Number of agents", Tg, T, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, infop0, infop1, false);
 
@@ -115,11 +131,11 @@ function [] = gen_plot(plot_type, slider_bool, number_of_plots, data, plot_name,
         else
             slmin = 1;
             slmax = T;
-            histogram(data(1,:), edges, 'DisplayName', ['T = ', num2str(T)]);
+            histogram(data(T,:), edges, 'DisplayName', ['T = ', num2str(T)]);
             if slider_bool
                 hsl = uicontrol('Style','slider','Min',slmin,'Max',slmax,...
                     'SliderStep',[1 1]./(slmax-slmin),'Value',1,...
-                    'Position',[50 10 500 10]);
+                    'Position',[50 10 500 10],'FontSize', 25);
                 set(hsl,'Callback',@(hObject,eventdata) histogram(data(round(get(hObject,'Value')),:), edges, 'DisplayName', ['T = ', num2str(round(get(hObject,'Value')))]));
             end
         end

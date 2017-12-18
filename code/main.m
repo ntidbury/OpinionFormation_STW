@@ -3,7 +3,7 @@
 %% author: The Opinionators (Elisa Wall, Alexander Stein, Niklas Tidbury)
 
 %% number of time steps
-T = 15;
+T = 30;
 
 %% number of iterations
 Tg = 50;
@@ -19,7 +19,7 @@ u = 0.32;
 % Mu defines the change of opinion when two agents speak with each other
 % mu has to be between 0 and 1 to ensure that all opinions are 
 % opinions are between 0 and 1.
-mu = 0.2;
+mu = 0.3;
 
 
 %% Properties of the extremists
@@ -27,8 +27,8 @@ mu = 0.2;
 n0 = 1;
 n1 = 1;
 % number of agents one extremist can reach
-p0 = 50;
-p1 = 50;
+p0 = 500;
+p1 = 500;
 % An extremist convinces an agent with probability kappa
 kappa0 = 0.2;
 kappa1 = 0.2;
@@ -94,9 +94,11 @@ gen_plot("hist", false, 3, run_simulation("without", op, Tg, T, N, u, mu, n0, p0
 %gen_plot("hist", true, 1, run_simulation("with", op, Tg, T, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, infop0, infop1), "Percentages", "Time", "Percentage of Extreme", T, N, false);
 %}
 op = create(N);
+gen_plot("hist", false, 3, run_simulation("with", op, Tg, T, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, infop0, infop1), "µ = 0.3", "Opinion", "Number of Agents", T, N, true);
 
 %gen_plot_interval("line", "% of opinion between 0.45 and 0.55", "µ", "Percentage", false, "without", "u", create(N), Tg, T, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, infop0, infop1);
-gen_plot_interval("line", "% of opinion between 0.45 and 0.55, w/ E", "µ", "Percentage", true, "with", "mu", op, Tg, T, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, infop0, infop1);
+%gen_plot_interval("line", "% of opinion between 0.45 and 0.55, w/ E", "µ", "Percentage", true, "with", "mu", op, Tg, T, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, infop0, infop1);
+%gen_plot_interval("line", "% of extreme opinions", "p", "Percentage", true, "with", "p", op, Tg, T, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, infop0, infop1);
 %gen_plot_interval("line", "% of opinion between 0.45 and 0.55", "µ", "Percentage", true, "without", "u", create(N), Tg, T, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, infop0, infop1);
 %gen_plot_interval("line", "% of opinion between 0.45 and 0.55", "µ", "Percentage", true, "without", "u", create(N), Tg, T, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, infop0, infop1);
 %gen_plot_interval("line", "% of opinion between 0.45 and 0.55", "µ", "Percentage", true, "without", "u", create(N), Tg, T, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, infop0, infop1);
@@ -156,6 +158,7 @@ function [] = gen_plot(plot_type, slider_bool, number_of_plots, data, plot_name,
     title({' ', plot_name, ' '}, 'FontSize', 25);
     xlabel(x_axis, 'FontSize', 25);
     ylabel(y_axis, 'FontSize', 25);
+    set(gca,'yscale','log') 
     if save
        format shortg;
        c = clock;
@@ -206,8 +209,8 @@ function [] = gen_plot_interval(plot_type, plot_name, x_axis, y_axis, save, simt
         
     elseif param == "mu"
         if plot_type == "line"
-            perc_total = zeros(100,1);
-            for j = 1:100
+            perc_total = zeros(50,1);
+            for j = 1:50
                 plot(perc_total);
                 arr = run_simulation(simtype, op, Tg, T, N, u, j/100, n0, p0, kappa0, n1, p1, kappa1, infop0, infop1);
                 perc_total(j) = countPercentage(0.45, 0.55, arr(T,:), N);
@@ -222,11 +225,14 @@ function [] = gen_plot_interval(plot_type, plot_name, x_axis, y_axis, save, simt
     title({' ', plot_name, ' '}, 'FontSize', 25);
     xlabel(x_axis, 'FontSize', 25);
     ylabel(y_axis, 'FontSize', 25);
-    if param == "u" || param == "mu"
+    if param == "u"
         xticks([0 10 20 30 40 50 60 70 80 90 100]);
         xticklabels({'0','0.1','0.2','0.3','0.4','0.5','0.6', '0.7', '0.8', '0.9', '1'});
-        disp("Finished!");
+    elseif param == "mu"
+        xticks([0 10 20 30 40 50]);
+        xticklabels({'0','0.1','0.2','0.3','0.4','0.5'});
     end
+    disp("Finished!");
     if save
        format shortg;
        c = clock;

@@ -3,7 +3,7 @@
 %% author: The Opinionators (Elisa Wall, Alexander Stein, Niklas Tidbury)
 
 %% number of time steps
-T = 15;
+T = 200;
 
 %% number of iterations
 Tg = 50;
@@ -19,7 +19,7 @@ u = 0.32;
 % Mu defines the change of opinion when two agents speak with each other
 % mu has to be between 0 and 1 to ensure that all opinions are 
 % opinions are between 0 and 1.
-mu = 0.3;
+mu = 0.03;
 
 
 %% Properties of the extremists
@@ -94,10 +94,10 @@ gen_plot("hist", false, 3, run_simulation("without", op, Tg, T, N, u, mu, n0, p0
 %gen_plot("hist", true, 1, run_simulation("with", op, Tg, T, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, infop0, infop1), "Percentages", "Time", "Percentage of Extreme", T, N, false);
 %}
 op = create(N);
-%gen_plot("hist", false, 3, run_simulation("with", op, Tg, T, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, infop0, infop1), "µ = 0.3", "Opinion", "Number of Agents", T, N, true);
+gen_plot("hist", false, 3, run_simulation("without", op, Tg, T, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, infop0, infop1), "µ = 0.03", "Opinion", "Number of Agents", T, N, true);
 
 %gen_plot_interval("line", "% of opinion between 0.45 and 0.55", "µ", "Percentage", false, "without", "u", create(N), Tg, T, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, infop0, infop1);
-gen_plot_interval("line", "% of opinion between 0.45 and 0.55, w/o E", "µ", "Percentage", true, "without", "mu", op, Tg, T, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, infop0, infop1);
+%gen_plot_interval("line", "% of opinion between 0.45 and 0.55, w/o E", "µ", "Percentage", true, "without", "mu", op, Tg, T, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, infop0, infop1);
 %gen_plot_interval("line", "% of extreme opinions", "p", "Percentage", true, "with", "p", op, Tg, T, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, infop0, infop1);
 %gen_plot_interval("line", "% of opinion between 0.45 and 0.55", "µ", "Percentage", true, "without", "u", create(N), Tg, T, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, infop0, infop1);
 %gen_plot_interval("line", "% of opinion between 0.45 and 0.55", "µ", "Percentage", true, "without", "u", create(N), Tg, T, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, infop0, infop1);

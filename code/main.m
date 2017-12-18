@@ -3,7 +3,7 @@
 %% author: The Opinionators (Elisa Wall, Alexander Stein, Niklas Tidbury)
 
 %% number of time steps
-T = 100;
+T = 500;
 
 %% number of iterations
 Tg = 50;
@@ -27,8 +27,8 @@ mu = 0.03;
 n0 = 1;
 n1 = 1;
 % number of agents one extremist can reach
-p0 = 500;
-p1 = 500;
+p0 = 50;
+p1 = 50;
 % An extremist convinces an agent with probability kappa
 kappa0 = 0.2;
 kappa1 = 0.2;
@@ -97,7 +97,10 @@ op = create(N);
 %gen_plot("hist", false, 3, run_simulation("with", op, Tg, T, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, infop0, infop1), "µ = 0.03", "Opinion", "Number of Agents", T, N, false);
 mu = 0.3;
 %gen_plot("hist", false, 3, run_simulation("with", op, Tg, T, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, infop0, infop1), "µ = 0.3", "Opinion", "Number of Agents", T, N, false);
-gen_plot_interval("hist", "µ = 0.3, w/o E", "opinion", "Number of agents", false, "without", "T", create(N), Tg, T, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, infop0, infop1);
+%gen_plot_interval("hist", "µ = 0.3, w/o E", "opinion", "Number of agents", false, "without", "T", create(N), Tg, T, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, infop0, infop1);
+
+gen_plot_interval("line", "µ = 0.3, w/o E", "u", "Percentage", true, "without", "u", create(N), Tg, T, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, infop0, infop1);
+gen_plot_interval("line", "µ = 0.3, w/ E", "u", "Percentage", true, "with", "u", create(N), Tg, T, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, infop0, infop1);
 
 %gen_plot_interval("line", "% of opinion between 0.45 and 0.55", "µ", "Percentage", false, "without", "u", create(N), Tg, T, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, infop0, infop1);
 %gen_plot_interval("line", "% of opinion between 0.45 and 0.55, w E", "µ", "Percentage", false, "with", "mu", op, Tg, T, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, infop0, infop1);

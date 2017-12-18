@@ -43,22 +43,22 @@ infop1 = 1-infop0;
 
 
 %% Figure 1
-%gen_plot("hist", false, 3, run_simulation("without", create(N), Tg, 30, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, infop0, infop1), "µ = 0.3, w/o E", "Opinion", "Number of Agents", 30, N, false);
-%gen_plot("hist", false, 3, run_simulation("without", create(N), Tg, 200, N, u, 0.03, n0, p0, kappa0, n1, p1, kappa1, infop0, infop1), "µ = 0.03, w/o E", "Opinion", "Number of Agents", 200, N, false);
+gen_plot("hist", false, 3, run_simulation("without", create(N), Tg, 30, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, infop0, infop1), "µ = 0.3, w/o E", "Opinion", "Number of Agents", 30, N, false);
+gen_plot("hist", false, 3, run_simulation("without", create(N), Tg, 200, N, u, 0.03, n0, p0, kappa0, n1, p1, kappa1, infop0, infop1), "µ = 0.03, w/o E", "Opinion", "Number of Agents", 200, N, false);
 
 %% Figure 2
-%gen_plot_interval("line", "% of opinion between 0.45 and 0.55, w/o E", "µ", "Percentage", false, "without", "mu", create(N), Tg, 15, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, infop0, infop1);
+gen_plot_interval("line", "% of opinion between 0.45 and 0.55, w/o E", "µ", "Percentage", false, "without", "mu", create(N), Tg, 15, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, infop0, infop1);
 
 %% Figure 3
-%gen_plot("hist", false, 3, run_simulation("with", create(N), Tg, 30, N, u, mu, n0, 50, kappa0, n1, 50, kappa1, infop0, infop1), "µ = 0.3, w/ E, p = 50", "Opinion", "Number of Agents", 30, N, false);
-%gen_plot("hist", false, 3, run_simulation("with", create(N), Tg, 200, N, u, 0.03, n0, 50, kappa0, n1, 50, kappa1, infop0, infop1), "µ = 0.03, w/ E, p = 50", "Opinion", "Number of Agents", 200, N, false);
+gen_plot("hist", false, 3, run_simulation("with", create(N), Tg, 30, N, u, mu, n0, 50, kappa0, n1, 50, kappa1, infop0, infop1), "µ = 0.3, w/ E, p = 50", "Opinion", "Number of Agents", 30, N, false);
+gen_plot("hist", false, 3, run_simulation("with", create(N), Tg, 200, N, u, 0.03, n0, 50, kappa0, n1, 50, kappa1, infop0, infop1), "µ = 0.03, w/ E, p = 50", "Opinion", "Number of Agents", 200, N, false);
 
 %% Figure 4
-%gen_plot("hist", false, 3, run_simulation("with", create(N), Tg, 5000, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, infop0, infop1), "µ = 0.3, w/ E, p = 500", "Opinion", "Number of Agents", 5000, N, false);
-%gen_plot("hist", false, 3, run_simulation("with", create(N), Tg, 5000, N, u, 0.03, n0, p0, kappa0, n1, p1, kappa1, infop0, infop1), "µ = 0.03, w/ E, p = 500", "Opinion", "Number of Agents", 5000, N, false);
+gen_plot("hist", false, 3, run_simulation("with", create(N), Tg, 5000, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, infop0, infop1), "µ = 0.3, w/ E, p = 500", "Opinion", "Number of Agents", 5000, N, false);
+gen_plot("hist", false, 3, run_simulation("with", create(N), Tg, 5000, N, u, 0.03, n0, p0, kappa0, n1, p1, kappa1, infop0, infop1), "µ = 0.03, w/ E, p = 500", "Opinion", "Number of Agents", 5000, N, false);
 
 %% Figure 5
-%gen_plot_interval("line", "% of opinion between 0.45 and 0.55, w/ E", "µ", "Percentage", false, "with", "mu", create(N), Tg, 15, N, u, mu, n0, 50, kappa0, n1, 50, kappa1, infop0, infop1);
+gen_plot_interval("line", "% of opinion between 0.45 and 0.55, w/ E", "µ", "Percentage", false, "with", "mu", create(N), Tg, 15, N, u, mu, n0, 50, kappa0, n1, 50, kappa1, infop0, infop1);
 
 %% Figure 6
 % infop = 0.1
@@ -138,7 +138,7 @@ function [] = gen_plot(plot_type, slider_bool, number_of_plots, data, plot_name,
        format shortg;
        c = clock;
        fix(c);
-       filename = sprintf("exports/gen_plot_%d%d%d%d%d%d.png",c(1),c(2),c(3),c(4),c(5),c(6));
+       filename = sprintf("exports_second/gen_plot_%d%d%d%d%d%d.png",c(1),c(2),c(3),c(4),c(5),c(6));
        saveas(gcf,filename);
     end
     disp("Finished!");
@@ -212,7 +212,7 @@ function [] = gen_plot_interval(plot_type, plot_name, x_axis, y_axis, save, simt
        format shortg;
        c = clock;
        fix(c);
-       filename = sprintf("exports/gen_plot_intervall_%d%d%d%d%d%d.png",c(1),c(2),c(3),c(4),c(5),c(6));
+       filename = sprintf("exports_second/gen_plot_intervall_%d%d%d%d%d%d.png",c(1),c(2),c(3),c(4),c(5),c(6));
        saveas(gcf,filename);
     end
 end

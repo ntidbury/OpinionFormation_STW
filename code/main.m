@@ -19,7 +19,7 @@ u = 0.32;
 % Mu defines the change of opinion when two agents speak with each other
 % mu has to be between 0 and 1 to ensure that all opinions are 
 % opinions are between 0 and 1.
-mu = 0.03;
+mu = 0.3;
 
 
 %% Properties of the extremists
@@ -27,8 +27,8 @@ mu = 0.03;
 n0 = 1;
 n1 = 1;
 % number of agents one extremist can reach
-p0 = 50;
-p1 = 50;
+p0 = 500;
+p1 = 500;
 % An extremist convinces an agent with probability kappa
 kappa0 = 0.2;
 kappa1 = 0.2;
@@ -41,76 +41,43 @@ infop1 = 1-infop0;
 
 %% run the program
 
-%{
-gen_plot("hist", false, 1, run_simulation("with", create(N), Tg, T, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, infop0, 1-infop0), "infop = 0.1", "Opinion", "Number of Agents", T, N, true);
 
-infop0 = 0.2;
-gen_plot("hist", false, 1, run_simulation("with", create(N), Tg, T, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, infop0, 1-infop0), "infop = 0.2", "Opinion", "Number of Agents", T, N, true);
+%% Figure 1
+%gen_plot("hist", false, 3, run_simulation("without", create(N), Tg, 30, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, infop0, infop1), "µ = 0.3, w/o E", "Opinion", "Number of Agents", 30, N, false);
+%gen_plot("hist", false, 3, run_simulation("without", create(N), Tg, 200, N, u, 0.03, n0, p0, kappa0, n1, p1, kappa1, infop0, infop1), "µ = 0.03, w/o E", "Opinion", "Number of Agents", 200, N, false);
 
-infop0 = 0.3;
-gen_plot("hist", false, 1, run_simulation("with", create(N), Tg, T, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, infop0, 1-infop0), "infop = 0.3", "Opinion", "Number of Agents", T, N, true);
+%% Figure 2
+%gen_plot_interval("line", "% of opinion between 0.45 and 0.55, w/o E", "µ", "Percentage", false, "without", "mu", create(N), Tg, 15, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, infop0, infop1);
 
-infop0 = 0.4;
-gen_plot("hist", false, 1, run_simulation("with", create(N), Tg, T, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, infop0, 1-infop0), "infop = 0.4", "Opinion", "Number of Agents", T, N, true);
+%% Figure 3
+%gen_plot("hist", false, 3, run_simulation("with", create(N), Tg, 30, N, u, mu, n0, 50, kappa0, n1, 50, kappa1, infop0, infop1), "µ = 0.3, w/ E, p = 50", "Opinion", "Number of Agents", 30, N, false);
+%gen_plot("hist", false, 3, run_simulation("with", create(N), Tg, 200, N, u, 0.03, n0, 50, kappa0, n1, 50, kappa1, infop0, infop1), "µ = 0.03, w/ E, p = 50", "Opinion", "Number of Agents", 200, N, false);
 
-infop0 = 0.5;
-gen_plot("hist", false, 1, run_simulation("with", create(N), Tg, T, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, infop0, 1-infop0), "infop = 0.5", "Opinion", "Number of Agents", T, N, true);
+%% Figure 4
+%gen_plot("hist", false, 3, run_simulation("with", create(N), Tg, 5000, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, infop0, infop1), "µ = 0.3, w/ E, p = 500", "Opinion", "Number of Agents", 5000, N, false);
+%gen_plot("hist", false, 3, run_simulation("with", create(N), Tg, 5000, N, u, 0.03, n0, p0, kappa0, n1, p1, kappa1, infop0, infop1), "µ = 0.03, w/ E, p = 500", "Opinion", "Number of Agents", 5000, N, false);
 
-%}
-%{
-op = create(N);
-gen_plot("hist", false, 3, run_simulation("without", op, Tg, T, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, infop0, infop1), "µ = 0.2", "Opinion", "Number of Agents", T, N, true);
-op = create(N);
-gen_plot("hist", false, 3, run_simulation("without", op, Tg, T, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, infop0, infop1), "µ = 0.2", "Opinion", "Number of Agents", T, N, true);
-op = create(N);
-gen_plot("hist", false, 3, run_simulation("without", op, Tg, T, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, infop0, infop1), "µ = 0.2", "Opinion", "Number of Agents", T, N, true);
+%% Figure 5
+%gen_plot_interval("line", "% of opinion between 0.45 and 0.55, w/ E", "µ", "Percentage", false, "with", "mu", create(N), Tg, 15, N, u, mu, n0, 50, kappa0, n1, 50, kappa1, infop0, infop1);
 
-mu = 0.03;
-T = 200;
-%}
-%{
-op = create(N);
-gen_plot("hist", false, 3, run_simulation("without", op, Tg, T, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, infop0, infop1), "µ = 0.03", "Opinion", "Number of Agents", T, N, true);
-op = create(N);
-gen_plot("hist", false, 3, run_simulation("without", op, Tg, T, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, infop0, infop1), "µ = 0.03", "Opinion", "Number of Agents", T, N, true);
-op = create(N);
-gen_plot("hist", false, 3, run_simulation("without", op, Tg, T, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, infop0, infop1), "µ = 0.03", "Opinion", "Number of Agents", T, N, true);
-op = create(N);
-gen_plot("hist", false, 3, run_simulation("without", op, Tg, T, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, infop0, infop1), "µ = 0.03", "Opinion", "Number of Agents", T, N, true);
+%% Figure 6
+% infop = 0.1
+%gen_plot("hist", false, 3, run_simulation("with", create(N), Tg, 1000, N, u, mu, n0, 5, kappa0, n1, 5, kappa1, 0.1, 0.9), "w/ E, infop = 0.1, p = 5", "Opinion", "Number of Agents", 1000, N, false);
+%gen_plot("hist", false, 3, run_simulation("with", create(N), Tg, 1000, N, u, mu, n0, 10, kappa0, n1, 10, kappa1, 0.1, 0.9), "w/ E, infop = 0.1, p = 10", "Opinion", "Number of Agents", 1000, N, false);
+%gen_plot("hist", false, 3, run_simulation("with", create(N), Tg, 1000, N, u, mu, n0, 20, kappa0, n1, 20, kappa1, 0.1, 0.9), "w/ E, infop = 0.1, p = 20", "Opinion", "Number of Agents", 1000, N, false);
 
-mu = 0.3;
-T = 30;
-%}
-%{
-op = create(N);
-gen_plot("hist", false, 3, run_simulation("without", op, Tg, T, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, infop0, infop1), "µ = 0.3", "Opinion", "Number of Agents", T, N, true);
-op = create(N);
-gen_plot("hist", false, 3, run_simulation("without", op, Tg, T, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, infop0, infop1), "µ = 0.3", "Opinion", "Number of Agents", T, N, true);
-op = create(N);
-gen_plot("hist", false, 3, run_simulation("without", op, Tg, T, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, infop0, infop1), "µ = 0.3", "Opinion", "Number of Agents", T, N, true);
-op = create(N);
-gen_plot("hist", false, 3, run_simulation("without", op, Tg, T, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, infop0, infop1), "µ = 0.3", "Opinion", "Number of Agents", T, N, true);
+% infop = 0.3
+%gen_plot("hist", false, 3, run_simulation("with", create(N), Tg, 1000, N, u, mu, n0, 5, kappa0, n1, 5, kappa1, 0.3, 0.7), "w/ E, infop = 0.3, p = 5", "Opinion", "Number of Agents", 1000, N, false);
+%gen_plot("hist", false, 3, run_simulation("with", create(N), Tg, 1000, N, u, mu, n0, 10, kappa0, n1, 10, kappa1, 0.3, 0.7), "w/ E, infop = 0.3, p = 10", "Opinion", "Number of Agents", 1000, N, false);
+%gen_plot("hist", false, 3, run_simulation("with", create(N), Tg, 1000, N, u, mu, n0, 20, kappa0, n1, 20, kappa1, 0.3, 0.7), "w/ E, infop = 0.3, p = 20", "Opinion", "Number of Agents", 1000, N, false);
 
-%gen_plot("hist", true, 1, run_simulation("with", op, Tg, T, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, infop0, infop1), "Percentages", "Time", "Percentage of Extreme", T, N, false);
-%}
-op = create(N);
-%gen_plot("hist", false, 3, run_simulation("with", op, Tg, T, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, infop0, infop1), "µ = 0.03", "Opinion", "Number of Agents", T, N, false);
-mu = 0.3;
-%gen_plot("hist", false, 3, run_simulation("with", op, Tg, T, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, infop0, infop1), "µ = 0.3", "Opinion", "Number of Agents", T, N, false);
-%gen_plot_interval("hist", "µ = 0.3, w/o E", "opinion", "Number of agents", false, "without", "T", create(N), Tg, T, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, infop0, infop1);
+% infop = 0.5
+%gen_plot("hist", false, 3, run_simulation("with", create(N), Tg, 1000, N, u, mu, n0, 5, kappa0, n1, 5, kappa1, 0.5, 0.5), "w/ E, infop = 0.5, p = 5", "Opinion", "Number of Agents", 1000, N, false);
+%gen_plot("hist", false, 3, run_simulation("with", create(N), Tg, 1000, N, u, mu, n0, 10, kappa0, n1, 10, kappa1, 0.5, 0.5), "w/ E, infop = 0.5, p = 10", "Opinion", "Number of Agents", 1000, N, false);
+%gen_plot("hist", false, 3, run_simulation("with", create(N), Tg, 1000, N, u, mu, n0, 20, kappa0, n1, 20, kappa1, 0.5, 0.5), "w/ E, infop = 0.5, p = 20", "Opinion", "Number of Agents", 1000, N, false);
 
-gen_plot_interval("line", "µ = 0.3, w/o E", "u", "Percentage", true, "without", "u", create(N), Tg, T, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, infop0, infop1);
-gen_plot_interval("line", "µ = 0.3, w/ E", "u", "Percentage", true, "with", "u", create(N), Tg, T, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, infop0, infop1);
-
-%gen_plot_interval("line", "% of opinion between 0.45 and 0.55", "µ", "Percentage", false, "without", "u", create(N), Tg, T, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, infop0, infop1);
-%gen_plot_interval("line", "% of opinion between 0.45 and 0.55, w E", "µ", "Percentage", false, "with", "mu", op, Tg, T, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, infop0, infop1);
-%gen_plot_interval("line", "% of extreme opinions", "p", "Percentage", true, "with", "p", op, Tg, T, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, infop0, infop1);
-%gen_plot_interval("line", "% of opinion between 0.45 and 0.55", "µ", "Percentage", true, "without", "u", create(N), Tg, T, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, infop0, infop1);
-%gen_plot_interval("line", "% of opinion between 0.45 and 0.55", "µ", "Percentage", true, "without", "u", create(N), Tg, T, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, infop0, infop1);
-%gen_plot_interval("line", "% of opinion between 0.45 and 0.55", "µ", "Percentage", true, "without", "u", create(N), Tg, T, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, infop0, infop1);
-
-%gen_av_plot("without", 2, "hist", "Average of agent opinions over Tg = 10", "Opinion", "Number of agents", Tg, T, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, infop0, infop1, false);
-
+%% Figure 7
+%gen_plot_interval("line", "% of extreme opinions", "p", "Percentage", true, "with", "p", create(N), Tg, 10000, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, infop0, infop1);
 
 
 
@@ -164,7 +131,9 @@ function [] = gen_plot(plot_type, slider_bool, number_of_plots, data, plot_name,
     title({' ', plot_name, ' '}, 'FontSize', 25);
     xlabel(x_axis, 'FontSize', 25);
     ylabel(y_axis, 'FontSize', 25);
-    set(gca,'yscale','log');
+    if T < 400
+        set(gca,'yscale','log');
+    end
     if save
        format shortg;
        c = clock;
@@ -200,7 +169,7 @@ function [] = gen_plot_interval(plot_type, plot_name, x_axis, y_axis, save, simt
         end
     elseif param == "u"
         if plot_type == "line"
-            perc_total = zeros(100, 1);
+            perc_total = zeros(50, 1);
             for j = 1:100
                 plot(perc_total);
                 arr = run_simulation(simtype, op, Tg, T, N, j/100, mu, n0, p0, kappa0, n1, p1, kappa1, infop0, infop1);
@@ -227,26 +196,6 @@ function [] = gen_plot_interval(plot_type, plot_name, x_axis, y_axis, save, simt
                 drawnow;
             end
         end
-    elseif param == "T"
-        edges = linspace(0,1,200);
-        vidObj = VideoWriter('video','MPEG-4');
-        vidObj.FrameRate = 20;
-        open(vidObj);
-        if plot_type == "hist"
-            arr = run_simulation(simtype, op, Tg, T, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, infop0, infop1);
-            for t = 1:T
-                histogram(arr(t,:), edges, 'DisplayName', ['T = ', num2str(T)]);
-                title({' ', plot_name, ' '}, 'FontSize', 25);
-                xlabel(x_axis, 'FontSize', 25);
-                ylabel(y_axis, 'FontSize', 25);
-                pause(0.005);
-                drawnow;
-                F = getframe(FIG);
-                writeVideo(vidObj,F);
-            end
-        end
-        
-       %close(vidObj);
     end
     title({' ', plot_name, ' '}, 'FontSize', 25);
     xlabel(x_axis, 'FontSize', 25);
@@ -433,4 +382,23 @@ function [perc] = countPercentage(lower, upper, op, N)
        end
   end
   perc = counter/N*100;
+end
+
+%% Create movie over T from histogram data
+function [] = createMovie(data, title, T)
+    edges = linspace(0,1,200);
+    vidObj = VideoWriter(title,'MPEG-4');
+    vidObj.FrameRate = 20;
+    open(vidObj);
+    for t = 1:T
+        histogram(data(t,:), edges, 'DisplayName', ['T = ', num2str(T)]);
+        title({' ', plot_name, ' '}, 'FontSize', 25);
+        xlabel(x_axis, 'FontSize', 25);
+        ylabel(y_axis, 'FontSize', 25);
+        pause(0.005);
+        drawnow;
+        F = getframe(FIG);
+        writeVideo(vidObj,F);
+    end
+    close(vidObj);
 end

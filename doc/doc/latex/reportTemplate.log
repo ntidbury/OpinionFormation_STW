@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.28)  18 DEC 2017 20:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.28)  18 DEC 2017 21:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -425,10 +425,10 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
  (./cover.tex
 Package epstopdf Info: Source file: <ETHlogo.eps>
-(epstopdf)                    date: 2017-11-20 17:15:50
+(epstopdf)                    date: 2017-12-18 21:06:27
 (epstopdf)                    size: 179075 bytes
 (epstopdf)             Output file: <ETHlogo-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-12-03 15:12:23
+(epstopdf)                    date: 2017-12-18 21:06:27
 (epstopdf)                    size: 14362 bytes
 (epstopdf)             Command: <repstopdf --outfile=ETHlogo-eps-converted-to.p
 df ETHlogo.eps>
@@ -453,19 +453,40 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 {/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./ETHlo
 go-eps-converted-to.pdf>]
-Overfull \hbox (25.23946pt too wide) in paragraph at lines 50--74
+<2017-12-18_21-09_Seite_1.pdf, id=71, 1401.03233pt x 597.67296pt>
+File: 2017-12-18_21-09_Seite_1.pdf Graphic file (type pdf)
+
+<use 2017-12-18_21-09_Seite_1.pdf>
+Package pdftex.def Info: 2017-12-18_21-09_Seite_1.pdf used on input line 56.
+(pdftex.def)             Requested size: 142.26378pt x 60.68277pt.
+
+<Niklas.pdf, id=72, 2264.61537pt x 597.67296pt>
+File: Niklas.pdf Graphic file (type pdf)
+ <use Niklas.pdf>
+Package pdftex.def Info: Niklas.pdf used on input line 64.
+(pdftex.def)             Requested size: 142.26378pt x 37.54597pt.
+
+<2017-12-18_21-09_Seite_2.pdf, id=73, 1117.7652pt x 597.67296pt>
+File: 2017-12-18_21-09_Seite_2.pdf Graphic file (type pdf)
+
+<use 2017-12-18_21-09_Seite_2.pdf>
+Package pdftex.def Info: 2017-12-18_21-09_Seite_2.pdf used on input line 73.
+(pdftex.def)             Requested size: 142.26378pt x 76.06776pt.
+
+Overfull \hbox (25.23946pt too wide) in paragraph at lines 50--80
  [] 
  []
 
-[2]
+[2 <./2017-12-18_21-09_Seite_1.pdf> <./Niklas.pdf> <./2017-12-18_21-09_Seite_2.
+pdf>]
 
 pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./declaration-originality.pd
 f): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<declaration-originality.pdf, id=77, 597.55246pt x 845.07718pt>
+<declaration-originality.pdf, id=87, 597.55246pt x 845.07718pt>
 File: declaration-originality.pdf Graphic file (type pdf)
 
 <use declaration-originality.pdf>
-Package pdftex.def Info: declaration-originality.pdf used on input line 86.
+Package pdftex.def Info: declaration-originality.pdf used on input line 92.
 (pdftex.def)             Requested size: 597.551pt x 845.07512pt.
 
 
@@ -473,7 +494,7 @@ pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./declaration-originality.pd
 f): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
 File: declaration-originality.pdf Graphic file (type pdf)
 <use declaration-originality.pdf>
-Package pdftex.def Info: declaration-originality.pdf used on input line 86.
+Package pdftex.def Info: declaration-originality.pdf used on input line 92.
 (pdftex.def)             Requested size: 597.551pt x 845.07512pt.
 
 
@@ -483,36 +504,36 @@ f): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
 
 pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./declaration-originality.pd
 f): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<declaration-originality.pdf, id=80, page=1, 597.55246pt x 845.07718pt>
+<declaration-originality.pdf, id=90, page=1, 597.55246pt x 845.07718pt>
 File: declaration-originality.pdf Graphic file (type pdf)
 
 <use declaration-originality.pdf, page 1>
 Package pdftex.def Info: declaration-originality.pdf, page1 used on input line 
-86.
+92.
 (pdftex.def)             Requested size: 597.551pt x 845.07512pt.
 File: declaration-originality.pdf Graphic file (type pdf)
 
 <use declaration-originality.pdf, page 1>
 Package pdftex.def Info: declaration-originality.pdf, page1 used on input line 
-86.
+92.
 (pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: declaration-originality.pdf Graphic file (type pdf)
 
 <use declaration-originality.pdf, page 1>
 Package pdftex.def Info: declaration-originality.pdf, page1 used on input line 
-86.
+92.
 (pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: declaration-originality.pdf Graphic file (type pdf)
 
 <use declaration-originality.pdf, page 1>
 Package pdftex.def Info: declaration-originality.pdf, page1 used on input line 
-86.
+92.
 (pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: declaration-originality.pdf Graphic file (type pdf)
 
 <use declaration-originality.pdf, page 1>
 Package pdftex.def Info: declaration-originality.pdf, page1 used on input line 
-86.
+92.
 (pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
  [3 <./declaration-originality.pdf>]
 (./reportTemplate.toc)
@@ -520,78 +541,63 @@ Package pdftex.def Info: declaration-originality.pdf, page1 used on input line
 \openout4 = `reportTemplate.toc'.
 
  [4] [5]
-Underfull \hbox (badness 10000) in paragraph at lines 115--116
+Underfull \hbox (badness 10000) in paragraph at lines 121--122
 
  []
 
-[6] <gen_plot_2017121813322472200e+01.png, id=152, 562.2606pt x 421.575pt>
+[6] <gen_plot_2017121813322472200e+01.png, id=163, 562.2606pt x 421.575pt>
 File: gen_plot_2017121813322472200e+01.png Graphic file (type png)
 
 <use gen_plot_2017121813322472200e+01.png>
 Package pdftex.def Info: gen_plot_2017121813322472200e+01.png used on input lin
-e 147.
+e 153.
 (pdftex.def)             Requested size: 215.0023pt x 161.20366pt.
 
-<gen_plot_2017121813324648428e+00.png, id=153, 562.2606pt x 421.575pt>
+<gen_plot_2017121813324648428e+00.png, id=164, 562.2606pt x 421.575pt>
 File: gen_plot_2017121813324648428e+00.png Graphic file (type png)
 
 <use gen_plot_2017121813324648428e+00.png>
 Package pdftex.def Info: gen_plot_2017121813324648428e+00.png used on input lin
-e 150.
+e 156.
 (pdftex.def)             Requested size: 215.0023pt x 161.20366pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 158--159
+Underfull \hbox (badness 10000) in paragraph at lines 164--165
 
  []
 
 
-<gen_plot_intervall_2017121816214390840e+01.png, id=156, 562.2606pt x 421.575pt
+<gen_plot_intervall_2017121816214390840e+01.png, id=167, 562.2606pt x 421.575pt
 >
 File: gen_plot_intervall_2017121816214390840e+01.png Graphic file (type png)
  <use gen_plot_intervall_2017121816214390840e+01.png>
 Package pdftex.def Info: gen_plot_intervall_2017121816214390840e+01.png used on
- input line 162.
+ input line 168.
 (pdftex.def)             Requested size: 301.00192pt x 225.68512pt.
  [7] [8 <./gen_plot_2017121813322472200e+01.png (PNG copy)> <./gen_plot_2017121
 813324648428e+00.png (PNG copy)> <./gen_plot_intervall_2017121816214390840e+01.
 png (PNG copy)>]
-<gen_plot_2017121418225017531e+01.png, id=176, 562.2606pt x 421.575pt>
+<gen_plot_2017121418225017531e+01.png, id=184, 562.2606pt x 421.575pt>
 File: gen_plot_2017121418225017531e+01.png Graphic file (type png)
 
 <use gen_plot_2017121418225017531e+01.png>
 Package pdftex.def Info: gen_plot_2017121418225017531e+01.png used on input lin
-e 178.
+e 186.
 (pdftex.def)             Requested size: 215.0023pt x 161.20366pt.
 
-<gen_plot_2017121418225354249e+01.png, id=177, 562.2606pt x 421.575pt>
+<gen_plot_2017121418225354249e+01.png, id=185, 562.2606pt x 421.575pt>
 File: gen_plot_2017121418225354249e+01.png Graphic file (type png)
 
 <use gen_plot_2017121418225354249e+01.png>
 Package pdftex.def Info: gen_plot_2017121418225354249e+01.png used on input lin
-e 181.
+e 189.
 (pdftex.def)             Requested size: 215.0023pt x 161.20366pt.
 
-<gen_plot_geil_klein_mu.png, id=178, 1124.2pt x 843.15pt>
-File: gen_plot_geil_klein_mu.png Graphic file (type png)
-
-<use gen_plot_geil_klein_mu.png>
-Package pdftex.def Info: gen_plot_geil_klein_mu.png used on input line 191.
-(pdftex.def)             Requested size: 215.0023pt x 161.24226pt.
-
-<gen_plot_geil_gross_mu.png, id=179, 1124.2pt x 843.15pt>
-File: gen_plot_geil_gross_mu.png Graphic file (type png)
-
-<use gen_plot_geil_gross_mu.png>
-Package pdftex.def Info: gen_plot_geil_gross_mu.png used on input line 194.
-(pdftex.def)             Requested size: 215.0023pt x 161.24226pt.
- [9 <./gen_plot_2017121418225017531e+01.png (PNG copy)> <./gen_plot_20171214182
-25354249e+01.png (PNG copy)>]
 <p_5/gen_plot_201712171365061157e+01.png, id=187, 562.2606pt x 421.575pt>
 File: p_5/gen_plot_201712171365061157e+01.png Graphic file (type png)
 
 <use p_5/gen_plot_201712171365061157e+01.png>
 Package pdftex.def Info: p_5/gen_plot_201712171365061157e+01.png used on input 
-line 211.
+line 206.
 (pdftex.def)             Requested size: 137.60461pt x 103.1742pt.
 
 <p_10/gen_plot_2017121712593240672e+01.png, id=188, 562.2606pt x 421.575pt>
@@ -599,7 +605,7 @@ File: p_10/gen_plot_2017121712593240672e+01.png Graphic file (type png)
 
 <use p_10/gen_plot_2017121712593240672e+01.png>
 Package pdftex.def Info: p_10/gen_plot_2017121712593240672e+01.png used on inpu
-t line 214.
+t line 209.
 (pdftex.def)             Requested size: 137.60461pt x 103.1742pt.
 
 <p_20/gen_plot_201712171361168753e+01.png, id=189, 562.2606pt x 421.575pt>
@@ -607,7 +613,7 @@ File: p_20/gen_plot_201712171361168753e+01.png Graphic file (type png)
 
 <use p_20/gen_plot_201712171361168753e+01.png>
 Package pdftex.def Info: p_20/gen_plot_201712171361168753e+01.png used on input
- line 217.
+ line 212.
 (pdftex.def)             Requested size: 137.60461pt x 103.1742pt.
 
 <p_5/gen_plot_201712171365491110e+01.png, id=190, 562.2606pt x 421.575pt>
@@ -615,7 +621,7 @@ File: p_5/gen_plot_201712171365491110e+01.png Graphic file (type png)
 
 <use p_5/gen_plot_201712171365491110e+01.png>
 Package pdftex.def Info: p_5/gen_plot_201712171365491110e+01.png used on input 
-line 224.
+line 219.
 (pdftex.def)             Requested size: 137.60461pt x 103.1742pt.
 
 <p_10/gen_plot_2017121712593647221e+01.png, id=191, 562.2606pt x 421.575pt>
@@ -623,7 +629,7 @@ File: p_10/gen_plot_2017121712593647221e+01.png Graphic file (type png)
 
 <use p_10/gen_plot_2017121712593647221e+01.png>
 Package pdftex.def Info: p_10/gen_plot_2017121712593647221e+01.png used on inpu
-t line 227.
+t line 222.
 (pdftex.def)             Requested size: 137.60461pt x 103.1742pt.
 
 <p_20/gen_plot_201712171361653386e+01.png, id=192, 562.2606pt x 421.575pt>
@@ -631,7 +637,7 @@ File: p_20/gen_plot_201712171361653386e+01.png Graphic file (type png)
 
 <use p_20/gen_plot_201712171361653386e+01.png>
 Package pdftex.def Info: p_20/gen_plot_201712171361653386e+01.png used on input
- line 230.
+ line 225.
 (pdftex.def)             Requested size: 137.60461pt x 103.1742pt.
 
 <p_5/gen_plot_201712171365898973e+01.png, id=193, 562.2606pt x 421.575pt>
@@ -639,7 +645,7 @@ File: p_5/gen_plot_201712171365898973e+01.png Graphic file (type png)
 
 <use p_5/gen_plot_201712171365898973e+01.png>
 Package pdftex.def Info: p_5/gen_plot_201712171365898973e+01.png used on input 
-line 237.
+line 232.
 (pdftex.def)             Requested size: 137.60461pt x 103.1742pt.
 
 <p_10/gen_plot_2017121712596271176e+00.png, id=194, 562.2606pt x 421.575pt>
@@ -647,7 +653,7 @@ File: p_10/gen_plot_2017121712596271176e+00.png Graphic file (type png)
 
 <use p_10/gen_plot_2017121712596271176e+00.png>
 Package pdftex.def Info: p_10/gen_plot_2017121712596271176e+00.png used on inpu
-t line 240.
+t line 235.
 (pdftex.def)             Requested size: 137.60461pt x 103.1742pt.
 
 <p_20/gen_plot_201712171362013207e+01.png, id=195, 562.2606pt x 421.575pt>
@@ -655,52 +661,184 @@ File: p_20/gen_plot_201712171362013207e+01.png Graphic file (type png)
 
 <use p_20/gen_plot_201712171362013207e+01.png>
 Package pdftex.def Info: p_20/gen_plot_201712171362013207e+01.png used on input
- line 243.
+ line 238.
 (pdftex.def)             Requested size: 137.60461pt x 103.1742pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 254--256
+Underfull \hbox (badness 10000) in paragraph at lines 249--251
 
  []
 
-[10 <./gen_plot_geil_klein_mu.png (PNG copy)> <./gen_plot_geil_gross_mu.png (PN
-G copy)>]
-<gen_plot_intervall_201712182172720605e+01.png, id=201, 562.2606pt x 421.575pt>
+[9]
+<gen_plot_intervall_201712182172720605e+01.png, id=202, 562.2606pt x 421.575pt>
 File: gen_plot_intervall_201712182172720605e+01.png Graphic file (type png)
 <use gen_plot_intervall_201712182172720605e+01.png>
 Package pdftex.def Info: gen_plot_intervall_201712182172720605e+01.png used on 
-input line 260.
+input line 255.
 (pdftex.def)             Requested size: 258.00539pt x 193.45082pt.
- [11 <./p_5/gen_plot_201712171365061157e+01.png (PNG copy)> <./p_10/gen_plot_20
-17121712593240672e+01.png (PNG copy)> <./p_20/gen_plot_201712171361168753e+01.p
-ng (PNG copy)> <./p_5/gen_plot_201712171365491110e+01.png (PNG copy)> <./p_10/g
-en_plot_2017121712593647221e+01.png (PNG copy)> <./p_20/gen_plot_20171217136165
-3386e+01.png (PNG copy)> <./p_5/gen_plot_201712171365898973e+01.png (PNG copy)>
- <./p_10/gen_plot_2017121712596271176e+00.png (PNG copy)> <./p_20/gen_plot_2017
-12171362013207e+01.png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 273--274
+ [10 <./gen_plot_2017121418225017531e+01.png (PNG copy)> <./gen_plot_2017121418
+225354249e+01.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 268--269
 
  []
 
-[12 <./gen_plot_intervall_201712182172720605e+01.png (PNG copy)>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 295.
+[11 <./p_5/gen_plot_201712171365061157e+01.png (PNG copy)> <./p_10/gen_plot_201
+7121712593240672e+01.png (PNG copy)> <./p_20/gen_plot_201712171361168753e+01.pn
+g (PNG copy)> <./p_5/gen_plot_201712171365491110e+01.png (PNG copy)> <./p_10/ge
+n_plot_2017121712593647221e+01.png (PNG copy)> <./p_20/gen_plot_201712171361653
+386e+01.png (PNG copy)> <./p_5/gen_plot_201712171365898973e+01.png (PNG copy)> 
+<./p_10/gen_plot_2017121712596271176e+00.png (PNG copy)> <./p_20/gen_plot_20171
+2171362013207e+01.png (PNG copy)>] [12 <./gen_plot_intervall_201712182172720605
+e+01.png (PNG copy)>] <matlab_script.pdf, id=217, 597.23125pt x 845.1575pt>
+File: matlab_script.pdf Graphic file (type pdf)
+
+<use matlab_script.pdf>
+Package pdftex.def Info: matlab_script.pdf used on input line 286.
+(pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
+File: matlab_script.pdf Graphic file (type pdf)
+ <use matlab_script.pdf>
+Package pdftex.def Info: matlab_script.pdf used on input line 286.
+(pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
+
+<matlab_script.pdf, id=220, page=1, 597.23125pt x 845.1575pt>
+File: matlab_script.pdf Graphic file (type pdf)
+
+<use matlab_script.pdf, page 1>
+Package pdftex.def Info: matlab_script.pdf, page1 used on input line 286.
+(pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
+File: matlab_script.pdf Graphic file (type pdf)
+ <use matlab_script.pdf, page 1>
+Package pdftex.def Info: matlab_script.pdf, page1 used on input line 286.
+(pdftex.def)             Requested size: 561.86221pt x 795.10587pt.
+File: matlab_script.pdf Graphic file (type pdf)
+
+<use matlab_script.pdf, page 1>
+Package pdftex.def Info: matlab_script.pdf, page1 used on input line 286.
+(pdftex.def)             Requested size: 561.86221pt x 795.10587pt.
+File: matlab_script.pdf Graphic file (type pdf)
+ <use matlab_script.pdf, page 1>
+Package pdftex.def Info: matlab_script.pdf, page1 used on input line 286.
+(pdftex.def)             Requested size: 561.86221pt x 795.10587pt.
  [13]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 295.
+<matlab_script.pdf, id=228, page=2, 597.23125pt x 845.1575pt>
+File: matlab_script.pdf Graphic file (type pdf)
+
+<use matlab_script.pdf, page 2>
+Package pdftex.def Info: matlab_script.pdf, page2 used on input line 286.
+(pdftex.def)             Requested size: 561.86221pt x 795.10587pt.
+File: matlab_script.pdf Graphic file (type pdf)
+ <use matlab_script.pdf, page 2>
+Package pdftex.def Info: matlab_script.pdf, page2 used on input line 286.
+(pdftex.def)             Requested size: 561.86221pt x 795.10587pt.
+File: matlab_script.pdf Graphic file (type pdf)
+
+<use matlab_script.pdf, page 1>
+Package pdftex.def Info: matlab_script.pdf, page1 used on input line 286.
+(pdftex.def)             Requested size: 561.86221pt x 795.10587pt.
+ [14 <./matlab_script.pdf>]
+<matlab_script.pdf, id=249, page=3, 597.23125pt x 845.1575pt>
+File: matlab_script.pdf Graphic file (type pdf)
+
+<use matlab_script.pdf, page 3>
+Package pdftex.def Info: matlab_script.pdf, page3 used on input line 286.
+(pdftex.def)             Requested size: 561.86221pt x 795.10587pt.
+File: matlab_script.pdf Graphic file (type pdf)
+ <use matlab_script.pdf, page 3>
+Package pdftex.def Info: matlab_script.pdf, page3 used on input line 286.
+(pdftex.def)             Requested size: 561.86221pt x 795.10587pt.
+File: matlab_script.pdf Graphic file (type pdf)
+
+<use matlab_script.pdf, page 2>
+Package pdftex.def Info: matlab_script.pdf, page2 used on input line 286.
+(pdftex.def)             Requested size: 561.86221pt x 795.10587pt.
+ [15 <./matlab_script.pdf>]
+<matlab_script.pdf, id=254, page=4, 597.23125pt x 845.1575pt>
+File: matlab_script.pdf Graphic file (type pdf)
+
+<use matlab_script.pdf, page 4>
+Package pdftex.def Info: matlab_script.pdf, page4 used on input line 286.
+(pdftex.def)             Requested size: 561.86221pt x 795.10587pt.
+File: matlab_script.pdf Graphic file (type pdf)
+ <use matlab_script.pdf, page 4>
+Package pdftex.def Info: matlab_script.pdf, page4 used on input line 286.
+(pdftex.def)             Requested size: 561.86221pt x 795.10587pt.
+File: matlab_script.pdf Graphic file (type pdf)
+
+<use matlab_script.pdf, page 3>
+Package pdftex.def Info: matlab_script.pdf, page3 used on input line 286.
+(pdftex.def)             Requested size: 561.86221pt x 795.10587pt.
+ [16 <./matlab_script.pdf>]
+<matlab_script.pdf, id=259, page=5, 597.23125pt x 845.1575pt>
+File: matlab_script.pdf Graphic file (type pdf)
+
+<use matlab_script.pdf, page 5>
+Package pdftex.def Info: matlab_script.pdf, page5 used on input line 286.
+(pdftex.def)             Requested size: 561.86221pt x 795.10587pt.
+File: matlab_script.pdf Graphic file (type pdf)
+ <use matlab_script.pdf, page 5>
+Package pdftex.def Info: matlab_script.pdf, page5 used on input line 286.
+(pdftex.def)             Requested size: 561.86221pt x 795.10587pt.
+File: matlab_script.pdf Graphic file (type pdf)
+
+<use matlab_script.pdf, page 4>
+Package pdftex.def Info: matlab_script.pdf, page4 used on input line 286.
+(pdftex.def)             Requested size: 561.86221pt x 795.10587pt.
+ [17 <./matlab_script.pdf>]
+<matlab_script.pdf, id=264, page=6, 597.23125pt x 845.1575pt>
+File: matlab_script.pdf Graphic file (type pdf)
+
+<use matlab_script.pdf, page 6>
+Package pdftex.def Info: matlab_script.pdf, page6 used on input line 286.
+(pdftex.def)             Requested size: 561.86221pt x 795.10587pt.
+File: matlab_script.pdf Graphic file (type pdf)
+ <use matlab_script.pdf, page 6>
+Package pdftex.def Info: matlab_script.pdf, page6 used on input line 286.
+(pdftex.def)             Requested size: 561.86221pt x 795.10587pt.
+File: matlab_script.pdf Graphic file (type pdf)
+
+<use matlab_script.pdf, page 5>
+Package pdftex.def Info: matlab_script.pdf, page5 used on input line 286.
+(pdftex.def)             Requested size: 561.86221pt x 795.10587pt.
+ [18 <./matlab_script.pdf>]
+<matlab_script.pdf, id=269, page=7, 597.23125pt x 845.1575pt>
+File: matlab_script.pdf Graphic file (type pdf)
+
+<use matlab_script.pdf, page 7>
+Package pdftex.def Info: matlab_script.pdf, page7 used on input line 286.
+(pdftex.def)             Requested size: 561.86221pt x 795.10587pt.
+File: matlab_script.pdf Graphic file (type pdf)
+ <use matlab_script.pdf, page 7>
+Package pdftex.def Info: matlab_script.pdf, page7 used on input line 286.
+(pdftex.def)             Requested size: 561.86221pt x 795.10587pt.
+File: matlab_script.pdf Graphic file (type pdf)
+
+<use matlab_script.pdf, page 6>
+Package pdftex.def Info: matlab_script.pdf, page6 used on input line 286.
+(pdftex.def)             Requested size: 561.86221pt x 795.10587pt.
+ [19 <./matlab_script.pdf>]
+File: matlab_script.pdf Graphic file (type pdf)
+
+<use matlab_script.pdf, page 7>
+Package pdftex.def Info: matlab_script.pdf, page7 used on input line 286.
+(pdftex.def)             Requested size: 561.86221pt x 795.10587pt.
+ [20 <./matlab_script.pdf>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 289.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 289.
 
 (./reportTemplate.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 295.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 295.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 289.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 289.
 Package rerunfilecheck Info: File `reportTemplate.out' has not changed.
-(rerunfilecheck)             Checksum: BC38D63408368A161FFBC43D75A023DF;884.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 295.
+(rerunfilecheck)             Checksum: 35813AE264899E9F57EE361F282C9E5C;884.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 289.
  ) 
 Here is how much of TeX's memory you used:
- 8334 strings out of 493089
- 127668 string characters out of 6134841
- 219233 words of memory out of 5000000
- 11660 multiletter control sequences out of 15000+600000
+ 8371 strings out of 493089
+ 128441 string characters out of 6134841
+ 221000 words of memory out of 5000000
+ 11688 multiletter control sequences out of 15000+600000
  14013 words of font info for 54 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,18n,42p,789b,440s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 42i,18n,46p,789b,447s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
@@ -713,10 +851,10 @@ l/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/t
 exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/te
 xlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texl
 ive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on reportTemplate.pdf (13 pages, 984647 bytes).
+Output written on reportTemplate.pdf (20 pages, 1264399 bytes).
 PDF statistics:
- 271 PDF objects out of 1000 (max. 8388607)
- 215 compressed objects within 3 object streams
- 40 named destinations out of 1000 (max. 500000)
- 223 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 332 PDF objects out of 1000 (max. 8388607)
+ 253 compressed objects within 3 object streams
+ 46 named destinations out of 1000 (max. 500000)
+ 278 words of extra memory for PDF output out of 10000 (max. 10000000)
 

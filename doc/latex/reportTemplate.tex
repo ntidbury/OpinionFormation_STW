@@ -171,9 +171,8 @@ The society model described above is being extended to a society with extreme op
 
 \subsection{The "new" parameter \texorpdfstring{$\mu$}{TEXT}}
 In the case of a society without extremists, $\mu$ was a measure of convergence. However, it did not have an influence on the final result. If a small $\mu$ was chosen, the number of time steps T could be increased accordingly to get the same result of convergence (See Chapter 4.1). \\*
-While varying the values of $\mu$ in a society with extremists, $\mu$ does not only influence the speed of convergence, but also the spread of opinions. If a small $\mu$ is chosen, thus the natural convergence is slow, this leads to more agents with extreme opinions, compared to a high $\mu$. See figure \ref{fig:muwithextremists} and \ref{fig:muwithextremists2} and see that there are more extremists in the case of a small $\mu$, different as in figure  \ref{fig:muwithoutextremists}.\\*
-This can be explained as follows: If the natural convergence is slow, more time steps are needed to get to the stationary state. But the extremists influence is independent of $\mu$. Therefore, if the natural influence is small, the extremists have more time to grasp agents with opinions in the interval accessible to the the agents who could pull them to the average opinion cluster at $x$ = 0.5.
-% Plot with small mu (resp big T) and big mu (resp small T) to show that effect. The extremists should be strong (means infop for example around 0.4 and big value for $n_{conv}$)
+While varying the values of $\mu$ in a society with extremists, $\mu$ does not only influence the speed of convergence, but also the spread of opinions. If a small $\mu$ is chosen, thus the natural convergence is slow, this leads to more agents with extreme opinions, compared to a high $\mu$. See figure \ref{fig:muwithextremists} and \ref{fig:muwithextremists2} and see that there are more extremists in the case of a small $\mu$, different as in figure  \ref{fig:muwithoutextremists}.
+
 \begin{figure}[!htb]
 \minipage{0.5\textwidth}
   \includegraphics[width=\linewidth]{gen_plot_2017121418225017531e+01.png}
@@ -184,6 +183,8 @@ This can be explained as follows: If the natural convergence is slow, more time 
 \caption{Opinion distribution for different times in a society \textbf{with extremists} for a given $\mu$ of 0.03 or 0.3. We fixed the number of society agents $N = 1000$ and the threshold $u = 0.3$ for $n_{conv}$ = 10}
 \label{fig:muwithextremists}
 \end{figure}
+
+This can be explained as follows: If the natural convergence is slow, more time steps are needed to get to the stationary state. But the extremists influence is independent of $\mu$. Therefore, if the natural influence is small, the extremists have more time to grasp agents with opinions in the interval accessible to the the agents who could pull them to the average opinion cluster at $x$ = 0.5.
 
 \begin{figure}[!htb]
 \minipage{0.5\textwidth}
@@ -206,7 +207,9 @@ This can be explained as follows: If the natural convergence is slow, more time 
 \subsection{The interval of influence}
 Next, the interval of influence $infop$ is varied. Concretely, the range of influenced people by the extremists with opinion $x=0$ is in [0, infop] and by the extremists with opinion $x=1$ is in [1-infop, 1]. We vary infop from 0 to 0.5. 
 
-The results can be seen in figure \ref{fig:varinfop}. We see that the convergence with this set of parameters is amazingly stable until we come close to $infop = 0.5$. The number of convinced agents, defined by $n_{conv}$ and controlled by p, has a small influence for small $infop$, but at exactly 0.5 a higher $p$ leads to more extremists in the plots. This is probably only because T has not yet reached steady state. This is due to the fact that in the case of a $infop$ of 0.5 both extremists can reach basically all the agents and in the end all people should end up extremist.
+The results can be seen in figure \ref{fig:varinfop}. We see that the convergence with this set of parameters is amazingly stable until we come close to $infop = 0.5$. Further, the number of convinced agents, defined by $n_{conv}$ and controlled by varying p, has a small influence for small $infop$, but at exactly 0.5 a higher $p$ leads to more extremists.
+
+If a low number of extremists ($p \leq 20$) wants to take influence, it is important for them to reach almost every opinion even in the middle. Otherwise we always see a strong cluster around the opinion 0.5. Note that for $infop = 0.5$ we reach all opinions which will lead to a situation where all agents have extreme opinions for T running against infinity.
 
 \begin{figure}[!htb]
 \begin{subfigure}[t]{\textwidth}
@@ -234,17 +237,6 @@ The results can be seen in figure \ref{fig:varinfop}. We see that the convergenc
 \endminipage
 \end{subfigure}
 
-\begin{subfigure}[!htb]{\textwidth}
-\minipage{0.32\textwidth}
-  \includegraphics[width=\linewidth]{p_5/gen_plot_201712171365712320e+01.png}
-\endminipage\hfill
-\minipage{0.32\textwidth}
-  \includegraphics[width=\linewidth]{p_10/gen_plot_2017121712594914222e+00.png}
-\endminipage\hfill
-\minipage{0.32\textwidth}
-  \includegraphics[width=\linewidth]{p_20/gen_plot_201712171361841616e+01.png}
-\endminipage
-\end{subfigure}
 
 \begin{subfigure}[!htb]{\textwidth}
 \minipage{0.32\textwidth}
@@ -258,30 +250,27 @@ The results can be seen in figure \ref{fig:varinfop}. We see that the convergenc
 \endminipage
 \end{subfigure}
 
-\caption{Opinion spread for different $infop$ for p = 5, 10 and 20 (from left to right). We fixed $N = 1000$, $\mu = 0.3$ and $u = 0.32$ what converges fast against 0.5 in the case without extremists.}
+\caption{Opinion spread for different $infop$ for p = 5, 10 and 20 (from left to right). We fixed $N = 1000$, $\mu = 0.3$ and $u = 0.32$.}
 \label{fig:varinfop}
 \end{figure}
 
 
 
-\subsection{Varying the number of convinced agents \texorpdfstring{$n_{conv}$}{TEXT}}
-If we fix $\mu$ to 0.1 and $u$ to 0.32 (just to be sure), in the case of a society without extremists we would see a convergence of opinions. Now the extremists are inserted and we examine the cluster development on the edges of the opinion range. \\*
-If we fix $n$ to only 1 extremist per side and $\kappa$ to 0.2, but we vary the number of influenceable people $p$ in [0,$P$] such that for the number $P$ all the agents end up at the edges. \\*
-Plots: 1) Time plots of the percentage on the corners, 2) Plot the final (stable) percentage over p
-Question: At which time step do we reach stable state? When do we reach the point that every agent has an extreme opinion? What is the dependence of the edge percentage to $n_{conv}$?
+\subsection{The power of convincing}
+We fix $\mu = 0.1$ and $u = 0.32$ to be sure, that in the case of a society without extremists we would see a convergence of opinions. The extremists are inserted with $infop = 0.3$. We examine the development of the number of extreme opinions. More precise we measure the percentage of the opinions in the intervals $x \in [0, 0.1] \cap [0.9, 1]$. \\*
+For simplicity we fix $n = 1$ and $\kappa = 0.2$ and vary the number of influence-able people $p \in [0,P]$. One can calculate the final parameter for the amount influenced agents simply with $n_{conv} = n\cdot\kappa\cdot p$. \\*
 
 \begin{figure}[!htb]
 \center
 
   \includegraphics[width=0.6\linewidth]{gen_plot_intervall_201712182172720605e+01.png}
-  \caption{Fraction of all of opinion around central cluster}
+  \caption{Fraction of extreme opinions in the interval $[0, 0.1] \cap [0.9, 1]$}
   \label{fig:varynconv}
 \end{figure}
 
-\subsection{Stability of the average opinion}
-Without extremists, the agents end up with a common opinion around 0.5 with a small deviation. If extremists are inserted, we observe a higher deviation. \\*
-plot: for T tending towards infinity and iterating over with and without calculate for each iteration the average and plot all of them in a “average with” and a “average without” histogram. \\*
-Question: For T tending to infinity and iteration of with and without, what are the averages of the opnion?
+Figure \ref{fig:varynconv} shows the result of the described measurement. For $p < 50$ we see a proportional relation to the  percentage of extreme opinions. It is obvious that a higher convincing rate should provoke more extreme opinions. For $50 < p < 250$ we see a jump and the extremists manage to convince the whole society. An interesting case is given again for $p > 250$. The percentage of the extreme opinion goes down again. This corresponds to the fact that they destroy "bridges". They are so strong that they collect all agents in their range defined by $infop$ within a few time steps. It stays a rest in the middle that converges again to 0.5.
+
+The interesting numbers are $p = 50$ and $p = 250$. They define the range in which the extremists are able to use $\mu$ to their advantage and are strong enough to collect all agents even if they cannot reach all agents directly (see chapter 4.2).
 
 
 \section{Discussion}
@@ -294,6 +283,8 @@ Until now we considered only symmetric random distributions and symmetric distri
 
 
 If we do no Gaussian distribtion: a normal distribution is a sensible alternative opinion distribution where 0.5 is the main stream opinion and other opinions are spreaded around the main stream distribution. Sigma would be measure for 'how far' the other opinions are spreaded from the main stream opinion.
+
+Higher N corresponds to other bridge effects. (see chapter 5.3)
 
 
 %\section{References}

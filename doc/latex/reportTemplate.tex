@@ -122,7 +122,7 @@ x'(t+1) &= x'(t) + \mu(x(t) - x'(t))
 \end{aligned}
 \end{equation}
 
-Note that only weight adjustments $0 < \mu < 0.5$ are allowed to guarantee that the opinions after are between the two initial opinions and that the values do not exceed the range of [0,1], . Next to the technical fact, a negative value would mean that the opinions of the two agents would develop in the opposite direction of opinion and a value higher than 0.5 would mean that x' will be closer to the opinion of x than x itself after the interaction. \\*
+Note that only weight adjustments $0 < \mu < 0.5$ are allowed to guarantee that the opinions after are between the two initial opinions and that the values do not exceed the range of [0,1]. Next to the technical fact, a negative value would mean that the opinions of the two agents would develop in the opposite direction of opinion and a value higher than 0.5 would mean that x' will be closer to the opinion of x than x itself after the interaction. \\*
 A characteristic property of this model is the fact that close opinions come even closer and opinions further away from each other do not influence each other, whereby "close" and "far-away" are defined by $u$. \\*
 Up to now we have defined under which threshold two agents meet and under which weight they exchange their opinion. Next, we define a single time step in such a way that every agent randomly chooses another agent within the society and the threshold of communication $u$ to interact with him as described above. Then we iterate over the $T$ time steps to get the final update of opinions. \\*
 As concluded in \cite{Minor}, first of all the parameters $\mu$ and $T$ are related in such a way that the results at given $u$ do not vary if by reducing one the other is increased. If moreover a high enough value of $u$ = 0.3 or greater as a communication threshold is chosen, the society's opinion converges to a unique opinion around $x$ = 0.5.
@@ -140,7 +140,7 @@ For deeper understanding and for having references to later cases we started the
 \subsection{Speed of convergence}
 We reproduce the fact that $\mu$ acts as a parameter of convergence. In case of constant $u$, a small $\mu$ has to be compensated with a large number of time steps $T$. The resulting stable state, defined by T running against infinity, will be the same.
 
-The effect is shown in figures \ref{fig:muwithoutextremists}. We investigated the time evolution of 2 societies which have the same properties excepted for the value of $\mu$. One can see that for a large number of time steps ($T=200$) both societies end in a common opinion around 0.5. However, for small time steps one can see differences. The society with the smaller $\mu$ value ($\mu = 0.03$) is still more wide-spreaded than the society with the higher $\mu$ value ($\mu = 0.3$). This corresponds to the effect described above.
+The effect is shown in figure \ref{fig:muwithoutextremists}. Because the weight on foreign opinions $\mu$ was increased from 0.03 to 0.3, the number of time steps T could be decreased from 200 to 30 with the same steady state of a common opinion around 0.5.
 
 \begin{figure}[!htb]
 \minipage{0.5\textwidth}
@@ -159,12 +159,12 @@ According to \cite{Minor}, such a society of N agents with random uniform distri
 
 \begin{figure}[!htb]
 \center
-  \includegraphics[width=0.7\linewidth]{gen_plot_intervall_2017121813242572120e-01.png}
-  \caption{Percentage of central cluster when varying $\mu$}
+  \includegraphics[width=0.7\linewidth]{gen_plot_intervall_2017121816214390840e+01.png}
+  \caption{Percentage of agents in central cluster between 0.45 and 0.55 when varying $u$}
   \label{fig:uwithoutextremists}
 \end{figure}
 
-In case $\mu = 0$, there is no opinion change between the agents and the uniform distribution of the opinions gives us the percentage $\frac{|0.45-0.50|}{1} = 10\%$. For values of $\mu$ between 0.1 and 0.2 we see that almost no opinion are between 0.45 and 0.5. This corresponds to the fact that the opinion converge against two opinions that are around 0.25 and 0.75. If $\mu > 0.28$ we see almost 100\% in this cluster. This is the main result of this chapter and is defined as the convergence against a common opinion around 0.5.
+In case $u = 0$, there is no opinion interaction between the agents and the uniform distribution of the opinions gives us the percentage $\frac{|0.45-0.50|}{1} = 10\%$. For values of $u$ between 0.18 and 0.22 we see that almost no opinions are between 0.45 and 0.55. This corresponds to the fact that the opinions converge against two opinions that are around 0.25 and 0.75, shown in \cite{Minor}. If $u > 0.28$ we see almost 100\% in this cluster. This is the main result of this chapter and is defined as the convergence against a common opinion around 0.5.
 
 \section{A world with extremists}
 The society model described above is being extended to a society with extreme opinion individuals who can influence the agents. We carry on to vary different parameters in this society model.
@@ -197,19 +197,13 @@ This can be explained as follows: If the natural convergence is slow, more time 
 \label{fig:muwithextremists2}
 \end{figure}
 
-\begin{figure}[!htb]
-\center
-  \includegraphics[width=0.7\linewidth]{gen_plot_intervall_2017121721201994207e+01.png}
-  \caption{Percentage of central cluster when varying $\mu$}
-  \label{fig:uwitextremists}
-\end{figure}
 
 \subsection{The interval of influence}
 Next, the interval of influence $infop$ is varied. Concretely, the range of people influenced by the extremists with opinion $x=0$ is in [0, infop] and by the extremists with opinion $x=1$ is in [1-infop, 1]. We vary infop from 0 to 0.5. 
 
 The results can be seen in figure \ref{fig:varinfop}. We see that the convergence with this set of parameters is amazingly stable until we come close to $infop = 0.5$. Further, the number of convinced agents, defined by $n_{conv}$ and controlled by varying p, has a small influence for small $infop$, but at exactly 0.5 a higher $p$ leads to more extremists.
 
-If a low number of extremists ($p \leq 20$) wants to take influence, it is important for them to reach almost every opinion even in the middle. Otherwise we always see a strong cluster around the opinion 0.5. Note that for $infop = 0.5$ we reach all opinions which will lead to a situation where all agents have extreme opinions for T running against infinity.
+If a low number of extremists ($p \leq 20$) takes influence on our society, it is important for them to reach almost every opinion even in the middle. Otherwise we always see a strong cluster around the opinion 0.5. Note that for $infop = 0.5$ we reach all opinions which will lead to a situation where all agents have extreme opinions for T running against infinity.
 
 \begin{figure}[!htb]
 \begin{subfigure}[t]{\textwidth}
@@ -257,14 +251,14 @@ If a low number of extremists ($p \leq 20$) wants to take influence, it is impor
 
 
 \subsection{The power of convincing}
-We fix $\mu = 0.1$ and $u = 0.32$ to be sure, that in the case of a society without extremists we would see a convergence of opinions. The extremists are inserted with $infop = 0.3$. We examine the development of the number of extreme opinions. More precise we measure the percentage of the opinions in the intervals $x \in [0, 0.1] \cap [0.9, 1]$. \\*
-For simplicity we fix $n = 1$ and $\kappa = 0.2$ and vary the number of influence-able people $p \in [0,P]$. One can calculate the final parameter for the amount influenced agents simply with $n_{conv} = n\cdot\kappa\cdot p$. \\*
+We fix $\mu = 0.1$ and $u = 0.32$ to be sure that in the case of a society without extremists we would see a common convergence of opinions to 0.5. The extremists are inserted with $infop = 0.3$. We examine the development of the number of extreme opinions. More precise we measure the percentage of the opinions in the intervals $x \in [0, 0.1] \cap [0.9, 1]$. \\*
+For simplicity we fix $n = 1$ and $\kappa = 0.2$ and vary the number of influence-able people $p \in [0,P]$. One can calculate the final parameter for the amount of influenced agents simply with $n_{conv} = n\cdot\kappa\cdot p$. \\*
 
 \begin{figure}[!htb]
 \center
 
   \includegraphics[width=0.6\linewidth]{gen_plot_intervall_201712182172720605e+01.png}
-  \caption{Fraction of extreme opinions in the interval $[0, 0.1] \cap [0.9, 1]$}
+  \caption{Fraction of extreme opinions in $[0, 0.1] \cap [0.9, 1]$ for convinced agents $\propto$ $p$}
   \label{fig:varynconv}
 \end{figure}
 
@@ -274,13 +268,14 @@ The interesting numbers are $p = 50$ and $p = 250$. They define the range in whi
 
 
 \section{Discussion}
-The challenge of the simulation was to keep track of which parameters were to be varied in the society with extremists compared to the society wihtout. We managed to reproduce the effects explained in the paper. The fact that Laguna found converging opinions for $u>0.3$ and we found converging opinions already for $u>0.28$ is unexplained. However, we assumed that we implemented the code like Laguna.
+The challenge of the simulation was to keep track of which parameters were to be varied in the society with extremists compared to the society wihtout. We managed to reproduce the effects explained in the paper. The fact that Laguna found converging opinions for $u>0.3$ and we found converging opinions already for $u>0.24$ is unexplained. However, we assumed that we implemented the code like Laguna.
 
-It was very interesting to see the change of the parameter $\mu$ in the second society compared to the first. It was further interesting to see that a variation of the interval of influence $infop$ did not make a big difference on the result up to the point where $infop$ comes close to the value 0.5. In chapter 5.3, we also found a interval for strength of the extremists. It was a surprising effect that this interval is bound from above. \\*
+It was very interesting to see the change of the parameter $\mu$ in the second society compared to the first. It was further interesting to see that a variation of the interval of influence $infop$ did not make a big difference on the result up to the point where $infop$ comes close to the value 0.5. In chapter 5.3, we also found a interval for strength of the extremists. If the number of influencable agents was increased, first the proportion of extreme opinions increased linearly, then jumped to 100$\%$ and decreased again for a very high number of influencable agents.\\*
 
 
 \section{Summary and Outlook}
-Until now we considered only symmetric random distributions and symmetric distribution of extremists. What is gonna happen if this will be asymmetric? What would be the interpretation? What is interesting in these cases?
+Until now we considered only symmetric random distributions and symmetric distribution of extremists. We could have also 
+What is gonna happen if this will be asymmetric? What would be the interpretation? What is interesting in these cases?
 
 
 If we do no Gaussian distribtion: a normal distribution is a sensible alternative opinion distribution where 0.5 is the main stream opinion and other opinions are spreaded around the main stream distribution. Sigma would be measure for 'how far' the other opinions are spreaded from the main stream opinion.
@@ -298,3 +293,4 @@ Higher N corresponds to other bridge effects. (see chapter 5.3)
 
 
 \end{document}
+

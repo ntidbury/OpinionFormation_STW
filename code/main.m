@@ -3,7 +3,7 @@
 %% author: The Opinionators (Elisa Wall, Alexander Stein, Niklas Tidbury)
 
 %% number of time steps
-T = 5000;
+T = 100;
 
 %% number of iterations
 Tg = 50;
@@ -94,9 +94,10 @@ gen_plot("hist", false, 3, run_simulation("without", op, Tg, T, N, u, mu, n0, p0
 %gen_plot("hist", true, 1, run_simulation("with", op, Tg, T, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, infop0, infop1), "Percentages", "Time", "Percentage of Extreme", T, N, false);
 %}
 op = create(N);
-gen_plot("hist", false, 3, run_simulation("with", op, Tg, T, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, infop0, infop1), "µ = 0.03", "Opinion", "Number of Agents", T, N, false);
+%gen_plot("hist", false, 3, run_simulation("with", op, Tg, T, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, infop0, infop1), "µ = 0.03", "Opinion", "Number of Agents", T, N, false);
 mu = 0.3;
-gen_plot("hist", false, 3, run_simulation("with", op, Tg, T, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, infop0, infop1), "µ = 0.3", "Opinion", "Number of Agents", T, N, false);
+%gen_plot("hist", false, 3, run_simulation("with", op, Tg, T, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, infop0, infop1), "µ = 0.3", "Opinion", "Number of Agents", T, N, false);
+gen_plot_interval("hist", "µ = 0.3, w/o E", "opinion", "Number of agents", false, "without", "T", create(N), Tg, T, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, infop0, infop1);
 
 %gen_plot_interval("line", "% of opinion between 0.45 and 0.55", "µ", "Percentage", false, "without", "u", create(N), Tg, T, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, infop0, infop1);
 %gen_plot_interval("line", "% of opinion between 0.45 and 0.55, w E", "µ", "Percentage", false, "with", "mu", op, Tg, T, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, infop0, infop1);
@@ -160,7 +161,7 @@ function [] = gen_plot(plot_type, slider_bool, number_of_plots, data, plot_name,
     title({' ', plot_name, ' '}, 'FontSize', 25);
     xlabel(x_axis, 'FontSize', 25);
     ylabel(y_axis, 'FontSize', 25);
-    set(gca,'yscale','log') 
+    set(gca,'yscale','log');
     if save
        format shortg;
        c = clock;
@@ -178,7 +179,7 @@ end
 % param = string name of variable to generate and plot over
 % other vars same as usual
 function [] = gen_plot_interval(plot_type, plot_name, x_axis, y_axis, save, simtype, param, op, Tg, T, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, infop0, infop1)
-    figure('name', plot_name);
+    FIG = figure('name', plot_name);
     disp("Running...");
     if param == "p"
         if plot_type == "line"
@@ -223,6 +224,26 @@ function [] = gen_plot_interval(plot_type, plot_name, x_axis, y_axis, save, simt
                 drawnow;
             end
         end
+    elseif param == "T"
+        edges = linspace(0,1,200);
+        vidObj = VideoWriter('video','MPEG-4');
+        vidObj.FrameRate = 20;
+        open(vidObj);
+        if plot_type == "hist"
+            arr = run_simulation(simtype, op, Tg, T, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, infop0, infop1);
+            for t = 1:T
+                histogram(arr(t,:), edges, 'DisplayName', ['T = ', num2str(T)]);
+                title({' ', plot_name, ' '}, 'FontSize', 25);
+                xlabel(x_axis, 'FontSize', 25);
+                ylabel(y_axis, 'FontSize', 25);
+                pause(0.005);
+                drawnow;
+                F = getframe(FIG);
+                writeVideo(vidObj,F);
+            end
+        end
+        
+       %close(vidObj);
     end
     title({' ', plot_name, ' '}, 'FontSize', 25);
     xlabel(x_axis, 'FontSize', 25);
@@ -314,14 +335,14 @@ function [simulation] = without(op, T, N, u, mu)
     %   time step t, every agent has the chance to speak with another.
 
     simulation = zeros(T, N);
-
-    for t = 1:T
+    simulation(1,:) = op;
+    for t = 1:T+1
         for i = 1:N
             [op0, op1, k] = SingleAgent(op(i), op, u, N, mu);
             op(i) = op0;
             op(k) = op1;
         end
-        simulation(t, :) = op;
+        simulation(t+1, :) = op;
     end
 end
 
@@ -337,10 +358,9 @@ function [simulation] = with(op, T, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, in
     simulation = zeros(T, N);
     neff0 = p0 * n0;
     neff1 = p1 * n1;
-
+    simulation(1,:) = op;
     %% A world with extremists
-
-    for t = 1:T
+    for t = 1:T+1
         % For timestep t; the SocietyAgents play their game
         for i = 1:N
             [op0, op1, k] = SingleAgent(op(i), op, u, N, mu);
@@ -374,7 +394,8 @@ function [simulation] = with(op, T, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, in
                 op(k) = 1;
             end
         end
-        simulation(t, :) = op;
+        
+        simulation(t+1, :) = op;
     end
 end
 

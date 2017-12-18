@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.28)  17 DEC 2017 17:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.28)  18 DEC 2017 14:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -199,6 +199,28 @@ Package caption Info: hyperref package is loaded.
 \c@subfigure=\count102
 \c@subtable=\count103
 )
+(/usr/local/texlive/2015/texmf-dist/tex/latex/pdfpages/pdfpages.sty
+Package: pdfpages 2015/05/11 v0.4x Insert pages of external PDF documents (AM)
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count104
+\calc@Bcount=\count105
+\calc@Adimen=\dimen122
+\calc@Bdimen=\dimen123
+\calc@Askip=\skip44
+\calc@Bskip=\skip45
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count106
+\calc@Cskip=\skip46
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/eso-pic/eso-pic.sty
+Package: eso-pic 2015/04/20 v2.0e eso-pic (RN)
+)
 (/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 
@@ -213,15 +235,26 @@ File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
 Package graphics Info: Driver file: pdftex.def on input line 94.
 )
-\Gin@req@height=\dimen122
-\Gin@req@width=\dimen123
+\Gin@req@height=\dimen124
+\Gin@req@width=\dimen125
+)
+\AM@pagewidth=\dimen126
+\AM@pageheight=\dimen127
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/pdfpages/pppdftex.def
+File: pppdftex.def 2015/05/11 v0.4x Pdfpages driver for pdfTeX (AM)
+)
+\AM@pagebox=\box26
+\AM@toc@title=\toks16
+\c@AM@survey=\count107
+\AM@templatesizebox=\box27
 )
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
-\@emptytoks=\toks16
+\@emptytoks=\toks17
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
@@ -247,7 +280,7 @@ e
 )))
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2013/01/14 v2.14 AMS math features
-\@mathmargin=\skip44
+\@mathmargin=\skip47
 
 For additional information on amsmath, use the `?' option.
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amstext.sty
@@ -255,71 +288,71 @@ Package: amstext 2000/06/29 v2.01
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0
-\@emptytoks=\toks17
-\ex@=\dimen124
+\@emptytoks=\toks18
+\ex@=\dimen128
 ))
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d
-\pmbraise@=\dimen125
+\pmbraise@=\dimen129
 )
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 1999/12/14 v2.01 operator names
 )
-\inf@bad=\count104
+\inf@bad=\count108
 LaTeX Info: Redefining \frac on input line 210.
-\uproot@=\count105
-\leftroot@=\count106
+\uproot@=\count109
+\leftroot@=\count110
 LaTeX Info: Redefining \overline on input line 306.
-\classnum@=\count107
-\DOTSCASE@=\count108
+\classnum@=\count111
+\DOTSCASE@=\count112
 LaTeX Info: Redefining \ldots on input line 378.
 LaTeX Info: Redefining \dots on input line 381.
 LaTeX Info: Redefining \cdots on input line 466.
-\Mathstrutbox@=\box26
-\strutbox@=\box27
-\big@size=\dimen126
+\Mathstrutbox@=\box28
+\strutbox@=\box29
+\big@size=\dimen130
 LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
-\macc@depth=\count109
-\c@MaxMatrixCols=\count110
+\macc@depth=\count113
+\c@MaxMatrixCols=\count114
 \dotsspace@=\muskip11
-\c@parentequation=\count111
-\dspbrk@lvl=\count112
-\tag@help=\toks18
-\row@=\count113
-\column@=\count114
-\maxfields@=\count115
-\andhelp@=\toks19
-\eqnshift@=\dimen127
-\alignsep@=\dimen128
-\tagshift@=\dimen129
-\tagwidth@=\dimen130
-\totwidth@=\dimen131
-\lineht@=\dimen132
-\@envbody=\toks20
-\multlinegap=\skip45
-\multlinetaggap=\skip46
-\mathdisplay@stack=\toks21
+\c@parentequation=\count115
+\dspbrk@lvl=\count116
+\tag@help=\toks19
+\row@=\count117
+\column@=\count118
+\maxfields@=\count119
+\andhelp@=\toks20
+\eqnshift@=\dimen131
+\alignsep@=\dimen132
+\tagshift@=\dimen133
+\tagwidth@=\dimen134
+\totwidth@=\dimen135
+\lineht@=\dimen136
+\@envbody=\toks21
+\multlinegap=\skip48
+\multlinetaggap=\skip49
+\mathdisplay@stack=\toks22
 LaTeX Info: Redefining \[ on input line 2665.
 LaTeX Info: Redefining \] on input line 2666.
 )
 (./reportTemplate.aux)
 \openout1 = `reportTemplate.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -355,19 +388,19 @@ LaTeX Font Info:    ... okay on input line 22.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\AtBeginShipoutBox=\box28
-Package hyperref Info: Link coloring OFF on input line 22.
+\AtBeginShipoutBox=\box30
+Package hyperref Info: Link coloring OFF on input line 24.
 (/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
 (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count116
+\c@section@level=\count120
 )
-LaTeX Info: Redefining \ref on input line 22.
-LaTeX Info: Redefining \pageref on input line 22.
-LaTeX Info: Redefining \nameref on input line 22.
+LaTeX Info: Redefining \ref on input line 24.
+LaTeX Info: Redefining \pageref on input line 24.
+LaTeX Info: Redefining \nameref on input line 24.
 
 (./reportTemplate.out) (./reportTemplate.out)
 \@outlinefile=\write3
@@ -376,17 +409,17 @@ LaTeX Info: Redefining \nameref on input line 22.
 
 (/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count117
-\scratchdimen=\dimen133
-\scratchbox=\box29
-\nofMPsegments=\count118
-\nofMParguments=\count119
-\everyMPshowfont=\toks22
-\MPscratchCnt=\count120
-\MPscratchDim=\dimen134
-\MPnumerator=\count121
-\makeMPintoPDFobject=\count122
-\everyMPtoPDFconversion=\toks23
+\scratchcounter=\count121
+\scratchdimen=\dimen137
+\scratchbox=\box31
+\nofMPsegments=\count122
+\nofMParguments=\count123
+\everyMPshowfont=\toks23
+\MPscratchCnt=\count124
+\MPscratchDim=\dimen138
+\MPnumerator=\count125
+\makeMPintoPDFobject=\count126
+\everyMPtoPDFconversion=\toks24
 )
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
@@ -420,164 +453,249 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 {/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./ETHlo
 go-eps-converted-to.pdf>]
-Overfull \hbox (25.23946pt too wide) in paragraph at lines 48--72
+Overfull \hbox (25.23946pt too wide) in paragraph at lines 50--74
  [] 
  []
 
-[2] (./reportTemplate.toc)
+[2]
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./declaration-originality.pd
+f): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
+<declaration-originality.pdf, id=81, 597.55246pt x 845.07718pt>
+File: declaration-originality.pdf Graphic file (type pdf)
+
+<use declaration-originality.pdf>
+Package pdftex.def Info: declaration-originality.pdf used on input line 86.
+(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
+
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./declaration-originality.pd
+f): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
+File: declaration-originality.pdf Graphic file (type pdf)
+<use declaration-originality.pdf>
+Package pdftex.def Info: declaration-originality.pdf used on input line 86.
+(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
+
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./declaration-originality.pd
+f): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
+
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./declaration-originality.pd
+f): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
+<declaration-originality.pdf, id=84, page=1, 597.55246pt x 845.07718pt>
+File: declaration-originality.pdf Graphic file (type pdf)
+
+<use declaration-originality.pdf, page 1>
+Package pdftex.def Info: declaration-originality.pdf, page1 used on input line 
+86.
+(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
+File: declaration-originality.pdf Graphic file (type pdf)
+
+<use declaration-originality.pdf, page 1>
+Package pdftex.def Info: declaration-originality.pdf, page1 used on input line 
+86.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
+File: declaration-originality.pdf Graphic file (type pdf)
+
+<use declaration-originality.pdf, page 1>
+Package pdftex.def Info: declaration-originality.pdf, page1 used on input line 
+86.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
+File: declaration-originality.pdf Graphic file (type pdf)
+
+<use declaration-originality.pdf, page 1>
+Package pdftex.def Info: declaration-originality.pdf, page1 used on input line 
+86.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
+File: declaration-originality.pdf Graphic file (type pdf)
+
+<use declaration-originality.pdf, page 1>
+Package pdftex.def Info: declaration-originality.pdf, page1 used on input line 
+86.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
+ [3 <./declaration-originality.pdf>]
+(./reportTemplate.toc)
 \tf@toc=\write4
 \openout4 = `reportTemplate.toc'.
 
- [3]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 102.
-
-
-(/usr/local/texlive/2015/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 102.
- [4]
-Underfull \hbox (badness 10000) in paragraph at lines 114--115
+ [4] [5]
+Underfull \hbox (badness 10000) in paragraph at lines 115--116
 
  []
 
-[5] <gen_plot_2017121418225017531e+01.png, id=125, 562.2606pt x 421.575pt>
+[6] <gen_plot_2017121813322472200e+01.png, id=158, 562.2606pt x 421.575pt>
+File: gen_plot_2017121813322472200e+01.png Graphic file (type png)
+
+<use gen_plot_2017121813322472200e+01.png>
+Package pdftex.def Info: gen_plot_2017121813322472200e+01.png used on input lin
+e 147.
+(pdftex.def)             Requested size: 215.0023pt x 161.20366pt.
+
+<gen_plot_2017121813324648428e+00.png, id=159, 562.2606pt x 421.575pt>
+File: gen_plot_2017121813324648428e+00.png Graphic file (type png)
+
+<use gen_plot_2017121813324648428e+00.png>
+Package pdftex.def Info: gen_plot_2017121813324648428e+00.png used on input lin
+e 150.
+(pdftex.def)             Requested size: 215.0023pt x 161.20366pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 158--159
+
+ []
+
+
+<gen_plot_intervall_2017121813242572120e-01.png, id=162, 562.2606pt x 421.575pt
+>
+File: gen_plot_intervall_2017121813242572120e-01.png Graphic file (type png)
+ <use gen_plot_intervall_2017121813242572120e-01.png>
+Package pdftex.def Info: gen_plot_intervall_2017121813242572120e-01.png used on
+ input line 162.
+(pdftex.def)             Requested size: 301.00192pt x 225.68512pt.
+ [7] [8 <./gen_plot_2017121813322472200e+01.png (PNG copy)> <./gen_plot_2017121
+813324648428e+00.png (PNG copy)> <./gen_plot_intervall_2017121813242572120e-01.
+png (PNG copy)>]
+<gen_plot_2017121418225017531e+01.png, id=180, 562.2606pt x 421.575pt>
 File: gen_plot_2017121418225017531e+01.png Graphic file (type png)
 
 <use gen_plot_2017121418225017531e+01.png>
 Package pdftex.def Info: gen_plot_2017121418225017531e+01.png used on input lin
-e 144.
-(pdftex.def)             Requested size: 206.40038pt x 154.75809pt.
+e 179.
+(pdftex.def)             Requested size: 215.0023pt x 161.20366pt.
 
-<gen_plot_2017121418224358724e+01.png, id=126, 562.2606pt x 421.575pt>
-File: gen_plot_2017121418224358724e+01.png Graphic file (type png)
-
-<use gen_plot_2017121418224358724e+01.png>
-Package pdftex.def Info: gen_plot_2017121418224358724e+01.png used on input lin
-e 147.
-(pdftex.def)             Requested size: 206.40038pt x 154.75809pt.
-
-<gen_plot_2017121418225354249e+01.png, id=127, 562.2606pt x 421.575pt>
+<gen_plot_2017121418225354249e+01.png, id=181, 562.2606pt x 421.575pt>
 File: gen_plot_2017121418225354249e+01.png Graphic file (type png)
 
 <use gen_plot_2017121418225354249e+01.png>
 Package pdftex.def Info: gen_plot_2017121418225354249e+01.png used on input lin
-e 155.
-(pdftex.def)             Requested size: 258.00539pt x 193.45082pt.
- [6 <./gen_plot_2017121418225017531e+01.png (PNG copy)> <./gen_plot_20171214182
-24358724e+01.png (PNG copy)>]
-<gen_plot_intervall_2017121418231461579e+01.png, id=137, 562.2606pt x 421.575pt
+e 182.
+(pdftex.def)             Requested size: 215.0023pt x 161.20366pt.
+
+<gen_plot_geil_klein_mu.png, id=182, 1124.2pt x 843.15pt>
+File: gen_plot_geil_klein_mu.png Graphic file (type png)
+
+<use gen_plot_geil_klein_mu.png>
+Package pdftex.def Info: gen_plot_geil_klein_mu.png used on input line 190.
+(pdftex.def)             Requested size: 215.0023pt x 161.24226pt.
+
+<gen_plot_geil_gross_mu.png, id=183, 1124.2pt x 843.15pt>
+File: gen_plot_geil_gross_mu.png Graphic file (type png)
+
+<use gen_plot_geil_gross_mu.png>
+Package pdftex.def Info: gen_plot_geil_gross_mu.png used on input line 193.
+(pdftex.def)             Requested size: 215.0023pt x 161.24226pt.
+
+<gen_plot_intervall_2017121721201994207e+01.png, id=184, 562.2606pt x 421.575pt
 >
-File: gen_plot_intervall_2017121418231461579e+01.png Graphic file (type png)
- <use gen_plot_intervall_2017121418231461579e+01.png>
-Package pdftex.def Info: gen_plot_intervall_2017121418231461579e+01.png used on
- input line 170.
-(pdftex.def)             Requested size: 258.00539pt x 193.45082pt.
- [7 <./gen_plot_2017121418225354249e+01.png (PNG copy)> <./gen_plot_intervall_2
-017121418231461579e+01.png (PNG copy)>]
-<p_5/gen_plot_201712171365061157e+01.png, id=145, 562.2606pt x 421.575pt>
+File: gen_plot_intervall_2017121721201994207e+01.png Graphic file (type png)
+ <use gen_plot_intervall_2017121721201994207e+01.png>
+Package pdftex.def Info: gen_plot_intervall_2017121721201994207e+01.png used on
+ input line 201.
+(pdftex.def)             Requested size: 301.00192pt x 225.68512pt.
+
+<p_5/gen_plot_201712171365061157e+01.png, id=186, 562.2606pt x 421.575pt>
 File: p_5/gen_plot_201712171365061157e+01.png Graphic file (type png)
 
 <use p_5/gen_plot_201712171365061157e+01.png>
 Package pdftex.def Info: p_5/gen_plot_201712171365061157e+01.png used on input 
-line 190.
+line 214.
 (pdftex.def)             Requested size: 137.60461pt x 103.1742pt.
 
-<p_10/gen_plot_2017121712593240672e+01.png, id=146, 562.2606pt x 421.575pt>
+<p_10/gen_plot_2017121712593240672e+01.png, id=187, 562.2606pt x 421.575pt>
 File: p_10/gen_plot_2017121712593240672e+01.png Graphic file (type png)
 
 <use p_10/gen_plot_2017121712593240672e+01.png>
 Package pdftex.def Info: p_10/gen_plot_2017121712593240672e+01.png used on inpu
-t line 193.
+t line 217.
 (pdftex.def)             Requested size: 137.60461pt x 103.1742pt.
 
-<p_20/gen_plot_201712171361168753e+01.png, id=147, 562.2606pt x 421.575pt>
+<p_20/gen_plot_201712171361168753e+01.png, id=188, 562.2606pt x 421.575pt>
 File: p_20/gen_plot_201712171361168753e+01.png Graphic file (type png)
 
 <use p_20/gen_plot_201712171361168753e+01.png>
 Package pdftex.def Info: p_20/gen_plot_201712171361168753e+01.png used on input
- line 196.
+ line 220.
 (pdftex.def)             Requested size: 137.60461pt x 103.1742pt.
 
-<p_5/gen_plot_201712171365491110e+01.png, id=148, 562.2606pt x 421.575pt>
+<p_5/gen_plot_201712171365491110e+01.png, id=189, 562.2606pt x 421.575pt>
 File: p_5/gen_plot_201712171365491110e+01.png Graphic file (type png)
 
 <use p_5/gen_plot_201712171365491110e+01.png>
 Package pdftex.def Info: p_5/gen_plot_201712171365491110e+01.png used on input 
-line 203.
+line 227.
 (pdftex.def)             Requested size: 137.60461pt x 103.1742pt.
 
-<p_10/gen_plot_2017121712593647221e+01.png, id=149, 562.2606pt x 421.575pt>
+<p_10/gen_plot_2017121712593647221e+01.png, id=190, 562.2606pt x 421.575pt>
 File: p_10/gen_plot_2017121712593647221e+01.png Graphic file (type png)
 
 <use p_10/gen_plot_2017121712593647221e+01.png>
 Package pdftex.def Info: p_10/gen_plot_2017121712593647221e+01.png used on inpu
-t line 206.
+t line 230.
 (pdftex.def)             Requested size: 137.60461pt x 103.1742pt.
 
-<p_20/gen_plot_201712171361653386e+01.png, id=150, 562.2606pt x 421.575pt>
+<p_20/gen_plot_201712171361653386e+01.png, id=191, 562.2606pt x 421.575pt>
 File: p_20/gen_plot_201712171361653386e+01.png Graphic file (type png)
 
 <use p_20/gen_plot_201712171361653386e+01.png>
 Package pdftex.def Info: p_20/gen_plot_201712171361653386e+01.png used on input
- line 209.
+ line 233.
 (pdftex.def)             Requested size: 137.60461pt x 103.1742pt.
 
-<p_5/gen_plot_201712171365712320e+01.png, id=151, 562.2606pt x 421.575pt>
+<p_5/gen_plot_201712171365712320e+01.png, id=192, 562.2606pt x 421.575pt>
 File: p_5/gen_plot_201712171365712320e+01.png Graphic file (type png)
 
 <use p_5/gen_plot_201712171365712320e+01.png>
 Package pdftex.def Info: p_5/gen_plot_201712171365712320e+01.png used on input 
-line 215.
+line 239.
 (pdftex.def)             Requested size: 137.60461pt x 103.1742pt.
 
-<p_10/gen_plot_2017121712594914222e+00.png, id=152, 562.2606pt x 421.575pt>
+<p_10/gen_plot_2017121712594914222e+00.png, id=193, 562.2606pt x 421.575pt>
 File: p_10/gen_plot_2017121712594914222e+00.png Graphic file (type png)
 
 <use p_10/gen_plot_2017121712594914222e+00.png>
 Package pdftex.def Info: p_10/gen_plot_2017121712594914222e+00.png used on inpu
-t line 218.
+t line 242.
 (pdftex.def)             Requested size: 137.60461pt x 103.1742pt.
 
-<p_20/gen_plot_201712171361841616e+01.png, id=153, 562.2606pt x 421.575pt>
+<p_20/gen_plot_201712171361841616e+01.png, id=194, 562.2606pt x 421.575pt>
 File: p_20/gen_plot_201712171361841616e+01.png Graphic file (type png)
 
 <use p_20/gen_plot_201712171361841616e+01.png>
 Package pdftex.def Info: p_20/gen_plot_201712171361841616e+01.png used on input
- line 221.
+ line 245.
 (pdftex.def)             Requested size: 137.60461pt x 103.1742pt.
 
-<p_5/gen_plot_201712171365898973e+01.png, id=154, 562.2606pt x 421.575pt>
+<p_5/gen_plot_201712171365898973e+01.png, id=195, 562.2606pt x 421.575pt>
 File: p_5/gen_plot_201712171365898973e+01.png Graphic file (type png)
 
 <use p_5/gen_plot_201712171365898973e+01.png>
 Package pdftex.def Info: p_5/gen_plot_201712171365898973e+01.png used on input 
-line 227.
+line 251.
 (pdftex.def)             Requested size: 137.60461pt x 103.1742pt.
 
-<p_10/gen_plot_2017121712596271176e+00.png, id=155, 562.2606pt x 421.575pt>
+<p_10/gen_plot_2017121712596271176e+00.png, id=196, 562.2606pt x 421.575pt>
 File: p_10/gen_plot_2017121712596271176e+00.png Graphic file (type png)
 
 <use p_10/gen_plot_2017121712596271176e+00.png>
 Package pdftex.def Info: p_10/gen_plot_2017121712596271176e+00.png used on inpu
-t line 230.
+t line 254.
 (pdftex.def)             Requested size: 137.60461pt x 103.1742pt.
 
-<p_20/gen_plot_201712171362013207e+01.png, id=156, 562.2606pt x 421.575pt>
+<p_20/gen_plot_201712171362013207e+01.png, id=197, 562.2606pt x 421.575pt>
 File: p_20/gen_plot_201712171362013207e+01.png Graphic file (type png)
 
 <use p_20/gen_plot_201712171362013207e+01.png>
 Package pdftex.def Info: p_20/gen_plot_201712171362013207e+01.png used on input
- line 233.
+ line 257.
 (pdftex.def)             Requested size: 137.60461pt x 103.1742pt.
- [8]
-<gen_plot_intervall_2017121713504989561e+01.png, id=163, 562.2606pt x 421.575pt
->
-File: gen_plot_intervall_2017121713504989561e+01.png Graphic file (type png)
- <use gen_plot_intervall_2017121713504989561e+01.png>
-Package pdftex.def Info: gen_plot_intervall_2017121713504989561e+01.png used on
- input line 252.
+ [9] [10 <./gen_plot_2017121418225017531e+01.png (PNG copy)> <./gen_plot_201712
+1418225354249e+01.png (PNG copy)> <./gen_plot_geil_klein_mu.png (PNG copy)> <./
+gen_plot_geil_gross_mu.png (PNG copy)>]
+<gen_plot_intervall_201712182172720605e+01.png, id=209, 562.2606pt x 421.575pt>
+File: gen_plot_intervall_201712182172720605e+01.png Graphic file (type png)
+<use gen_plot_intervall_201712182172720605e+01.png>
+Package pdftex.def Info: gen_plot_intervall_201712182172720605e+01.png used on 
+input line 276.
 (pdftex.def)             Requested size: 258.00539pt x 193.45082pt.
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
@@ -591,48 +709,51 @@ Missing character: There is no ú in font cmr12!
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ù in font cmr12!
- [9 <./p_5/gen_plot_201712171365061157e+01.png (PNG copy)> <./p_10/gen_plot_201
-7121712593240672e+01.png (PNG copy)> <./p_20/gen_plot_201712171361168753e+01.pn
-g (PNG copy)> <./p_5/gen_plot_201712171365491110e+01.png (PNG copy)> <./p_10/ge
-n_plot_2017121712593647221e+01.png (PNG copy)> <./p_20/gen_plot_201712171361653
-386e+01.png (PNG copy)> <./p_5/gen_plot_201712171365712320e+01.png (PNG copy)> 
-<./p_10/gen_plot_2017121712594914222e+00.png (PNG copy)> <./p_20/gen_plot_20171
-2171361841616e+01.png (PNG copy)> <./p_5/gen_plot_201712171365898973e+01.png (P
-NG copy)> <./p_10/gen_plot_2017121712596271176e+00.png (PNG copy)> <./p_20/gen_
-plot_201712171362013207e+01.png (PNG copy)>] [10 <./gen_plot_intervall_20171217
-13504989561e+01.png (PNG copy)>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 281.
- [11]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 281.
- (./reportTemplate.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 281.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 281.
+ [11 <./gen_plot_intervall_2017121721201994207e+01.png (PNG copy)>] [12 <./p_5/
+gen_plot_201712171365061157e+01.png (PNG copy)> <./p_10/gen_plot_20171217125932
+40672e+01.png (PNG copy)> <./p_20/gen_plot_201712171361168753e+01.png (PNG copy
+)> <./p_5/gen_plot_201712171365491110e+01.png (PNG copy)> <./p_10/gen_plot_2017
+121712593647221e+01.png (PNG copy)> <./p_20/gen_plot_201712171361653386e+01.png
+ (PNG copy)> <./p_5/gen_plot_201712171365712320e+01.png (PNG copy)> <./p_10/gen
+_plot_2017121712594914222e+00.png (PNG copy)> <./p_20/gen_plot_2017121713618416
+16e+01.png (PNG copy)> <./p_5/gen_plot_201712171365898973e+01.png (PNG copy)> <
+./p_10/gen_plot_2017121712596271176e+00.png (PNG copy)> <./p_20/gen_plot_201712
+171362013207e+01.png (PNG copy)>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 308.
+ [13 <./gen_plot_intervall_201712182172720605e+01.png (PNG copy)>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 308.
+
+(./reportTemplate.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 308.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 308.
 Package rerunfilecheck Info: File `reportTemplate.out' has not changed.
-(rerunfilecheck)             Checksum: CDBFCB1F78084FBB221ACAAD0AAB9B31;1091.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 281.
+(rerunfilecheck)             Checksum: 013681708EEEB7972D543FAE2CD340EF;986.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 308.
  ) 
 Here is how much of TeX's memory you used:
- 7655 strings out of 493089
- 117027 string characters out of 6134841
- 205148 words of memory out of 5000000
- 11001 multiletter control sequences out of 15000+600000
- 13705 words of font info for 53 fonts, out of 8000000 for 9000
+ 8358 strings out of 493089
+ 128627 string characters out of 6134841
+ 223311 words of memory out of 5000000
+ 11678 multiletter control sequences out of 15000+600000
+ 14013 words of font info for 54 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,10n,40p,749b,425s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
-></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
-</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><
-/usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></u
-sr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr
-/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/l
-ocal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/loc
-al/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/loca
-l/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/
-texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on reportTemplate.pdf (11 pages, 827853 bytes).
+ 42i,18n,42p,789b,440s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
+></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
+</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
+/usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></
+usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></us
+r/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/
+local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/lo
+cal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/loca
+l/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/t
+exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/te
+xlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texl
+ive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on reportTemplate.pdf (13 pages, 1148398 bytes).
 PDF statistics:
- 224 PDF objects out of 1000 (max. 8388607)
- 181 compressed objects within 2 object streams
- 38 named destinations out of 1000 (max. 500000)
- 211 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 279 PDF objects out of 1000 (max. 8388607)
+ 219 compressed objects within 3 object streams
+ 42 named destinations out of 1000 (max. 500000)
+ 251 words of extra memory for PDF output out of 10000 (max. 10000000)
 

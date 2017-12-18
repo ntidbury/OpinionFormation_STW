@@ -164,14 +164,16 @@ According to \cite{Minor}, such a society of N agents with random uniform distri
   \label{fig:uwithoutextremists}
 \end{figure}
 
-In case $u = 0$, there is no opinion interaction between the agents and the uniform distribution of the opinions gives us the percentage $\frac{|0.45-0.50|}{1} = 10\%$. For values of $u$ between 0.18 and 0.22 we see that almost no opinions are between 0.45 and 0.55. This corresponds to the fact that the opinions converge against two opinions that are around 0.25 and 0.75, shown in \cite{Minor}. If $u > 0.28$ we see almost 100\% in this cluster. This is the main result of this chapter and is defined as the convergence against a common opinion around 0.5.
+In case $u = 0$, there is no opinion interaction between the agents and the uniform distribution of the opinions gives us the percentage $\frac{|0.45-0.50|}{1} = 10\%$. For values of $u$ between 0.18 and 0.22 we see that almost no opinions are between 0.45 and 0.55. This corresponds to the fact that the opinions converge against two opinions that are around 0.25 and 0.75, shown in \cite{Minor}. If $u > 0.24$ we see almost 100\% in this cluster. This is the main result of this chapter and is defined as the convergence against a common opinion around 0.5.
 
 \section{A world with extremists}
 The society model described above is being extended to a society with extreme opinion individuals who can influence the agents. We carry on to vary different parameters in this society model.
 
 \subsection{The "new" parameter \texorpdfstring{$\mu$}{TEXT}}
 In the case of a society without extremists, $\mu$ was a measure of convergence. However, it did not have an influence on the final result. If a small $\mu$ was chosen, the number of time steps T could be increased accordingly to get the same result of convergence (See Chapter 4.1). \\*
-While varying the values of $\mu$ in a society with extremists, $\mu$ does not only influence the speed of convergence, but also the spread of opinions. If a small $\mu$ is chosen, thus the natural convergence is slow, this leads to more agents with extreme opinions, compared to a high $\mu$. See figure \ref{fig:muwithextremists} and \ref{fig:muwithextremists2} and see that there are more extremists in the case of a small $\mu$, different as in figure  \ref{fig:muwithoutextremists}.
+While varying the values of $\mu$ in a society with extremists, $\mu$ should not influence only the speed of convergence, but also the spread of opinions. If a small $\mu$ is chosen, thus the natural convergence is slow, this leads to more agents with extreme opinions, compared to a high $\mu$. \\*
+This can be explained as follows: If the natural convergence is slow, more time steps are needed to get to the stationary state. But the extremists influence is independent of $\mu$. Therefore, if the natural influence is small, the extremists have more time to grasp agents with opinions in the interval accessible to the the agents who could pull them to the average opinion cluster at $x$ = 0.5. \\*
+In figure \ref{fig:muwithextremists} we show the opinion distribution o two societies with different $\mu$ value in a logarithmic histogram. We expect to see more extremists on the left plot since it corresponds to a smaller $\mu$.
 
 \begin{figure}[!htb]
 \minipage{0.5\textwidth}
@@ -182,19 +184,6 @@ While varying the values of $\mu$ in a society with extremists, $\mu$ does not o
 \endminipage
 \caption{Opinion distribution for different times in a society \textbf{with extremists} for a given $\mu$ of 0.03 or 0.3. We fixed the number of society agents $N = 1000$ and the threshold $u = 0.3$ for $n_{conv}$ = 10}
 \label{fig:muwithextremists}
-\end{figure}
-
-This can be explained as follows: If the natural convergence is slow, more time steps are needed to get to the stationary state. But the extremists influence is independent of $\mu$. Therefore, if the natural influence is small, the extremists have more time to grasp agents with opinions in the interval accessible to the the agents who could pull them to the average opinion cluster at $x$ = 0.5.
-
-\begin{figure}[!htb]
-\minipage{0.5\textwidth}
-  \includegraphics[width=\linewidth]{gen_plot_geil_klein_mu.png}
-\endminipage\hfill
-\minipage{0.5\textwidth}
-  \includegraphics[width=\linewidth]{gen_plot_geil_gross_mu.png}
-\endminipage
-\caption{Opinion distribution for different times in a society \textbf{with extremists} for a given $\mu$ of 0.03 or 0.3. We fixed the number of society agents $N = 1000$ and the threshold $u = 0.3$ for $n_{conv} = 100$}
-\label{fig:muwithextremists2}
 \end{figure}
 
 
@@ -262,7 +251,7 @@ For simplicity we fix $n = 1$ and $\kappa = 0.2$ and vary the number of influenc
   \label{fig:varynconv}
 \end{figure}
 
-Figure \ref{fig:varynconv} shows the result of the described measurement. For $p < 50$ we see a proportional relation to the  percentage of extreme opinions. It is obvious that a higher convincing rate should provoke more extreme opinions. For $50 < p < 250$ we see a jump and the extremists manage to convince the whole society. An interesting case is given again for $p > 250$. The percentage of the extreme opinion goes down again. This corresponds to the fact that they destroy "bridges". They are so strong that they collect all agents in their range defined by $infop$ within a few time steps. It stays a rest in the middle that converges again to 0.5.
+Figure \ref{fig:varynconv} shows the result of the described measurement. For $p < 50$ we see an the obvious relation that for stronger influence of the extremists also the number of extremists increase. For $50 < p < 250$ we see a jump and the extremists manage to convince the whole society. An interesting case is given again for $p > 250$. The percentage of the extreme opinion goes down again. This corresponds to the fact that they destroy "bridges". They are so strong that they collect all agents in their range defined by $infop$ within a few time steps. It stays a rest in the middle that converges again to 0.5.
 
 The interesting numbers are $p = 50$ and $p = 250$. They define the range in which the extremists are able to use $\mu$ to their advantage and are strong enough to collect all agents even if they cannot reach all agents directly (see chapter 4.2).
 
@@ -270,11 +259,11 @@ The interesting numbers are $p = 50$ and $p = 250$. They define the range in whi
 \section{Summary and Discussion}
 The challenge of the simulation was to keep track of which parameters were to be varied in the society with extremists compared to the society wihtout. We managed to reproduce the effects explained in the paper. The fact that Laguna found converging opinions for $u>0.3$ and we found converging opinions already for $u>0.24$ is unexplained. However, we assumed that we implemented the code like Laguna.
 
-It was very interesting to see the change of the parameter $\mu$ in the second society compared to the first. It was further interesting to see that a variation of the interval of influence $infop$ did not make a big difference on the result up to the point where $infop$ comes close to the value 0.5. In chapter 5.3, we also found a interval for strength of the extremists. If the number of influencable agents was increased, first the proportion of extreme opinions increased linearly, then jumped to 100$\%$ and decreased again for a very high number of influencable agents due to bridge effects.\\*
+It was very interesting to see the change of the parameter $\mu$ in the second society compared to the first. It was further interesting to see that a variation of the interval of influence $infop$ did not make a big difference on the result up to the point where $infop$ comes close to the value 0.5. In chapter 5.3, we also found a interval for strength of the extremists, for which they collect all society agents. If the number of influencable agents was increased, first the proportion of extreme opinions, then jumped to 100$\%$ and decreased again for a very high number of influencable agents due to bridge effects.\\*
 
 
 \section{Outlook}
-Up to now we considered only symmetric random distributions and symmetric distribution of extremists. We could have also looked at asymmetric distributions and look at these results. \\*
+Up to now we considered only symmetric random distributions and symmetric distribution of extremists. We could have also looked at asymmetric distributions and look at these results. For instance, if we consider $x=0$ as political left and $x=1$ as political right within our model, we can give the politicians different strength or range of influence. \\*
 One could further look at a Gaussian instead of a uniform distribution of opinions, which would strengthen the average opinion. It would be a  sensible alternative opinion distribution where 0.5 is the main stream opinion and other opinions are spread around the main stream distribution. Sigma would be measure for 'how far' the other opinions are spreaded from the main stream opinion. \\*
 It would further be interesting to vary N to see other bridge effects as described in chapter 5.3 or the number of time steps T needed to reach the steady state for different settings of parameters.
 
@@ -289,4 +278,3 @@ It would further be interesting to vary N to see other bridge effects as describ
 
 
 \end{document}
-

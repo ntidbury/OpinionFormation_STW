@@ -62,22 +62,22 @@ gen_plot_interval("line", "% of opinion between 0.45 and 0.55, w/ E", "µ", "Per
 
 %% Figure 6
 % infop = 0.1
-%gen_plot("hist", false, 3, run_simulation("with", create(N), Tg, 1000, N, u, mu, n0, 5, kappa0, n1, 5, kappa1, 0.1, 0.9), "w/ E, infop = 0.1, p = 5", "Opinion", "Number of Agents", 1000, N, false);
-%gen_plot("hist", false, 3, run_simulation("with", create(N), Tg, 1000, N, u, mu, n0, 10, kappa0, n1, 10, kappa1, 0.1, 0.9), "w/ E, infop = 0.1, p = 10", "Opinion", "Number of Agents", 1000, N, false);
-%gen_plot("hist", false, 3, run_simulation("with", create(N), Tg, 1000, N, u, mu, n0, 20, kappa0, n1, 20, kappa1, 0.1, 0.9), "w/ E, infop = 0.1, p = 20", "Opinion", "Number of Agents", 1000, N, false);
+gen_plot("hist", false, 3, run_simulation("with", create(N), Tg, 1000, N, u, mu, n0, 5, kappa0, n1, 5, kappa1, 0.1, 0.9), "w/ E, infop = 0.1, p = 5", "Opinion", "Number of Agents", 1000, N, false);
+gen_plot("hist", false, 3, run_simulation("with", create(N), Tg, 1000, N, u, mu, n0, 10, kappa0, n1, 10, kappa1, 0.1, 0.9), "w/ E, infop = 0.1, p = 10", "Opinion", "Number of Agents", 1000, N, false);
+gen_plot("hist", false, 3, run_simulation("with", create(N), Tg, 1000, N, u, mu, n0, 20, kappa0, n1, 20, kappa1, 0.1, 0.9), "w/ E, infop = 0.1, p = 20", "Opinion", "Number of Agents", 1000, N, false);
 
 % infop = 0.3
-%gen_plot("hist", false, 3, run_simulation("with", create(N), Tg, 1000, N, u, mu, n0, 5, kappa0, n1, 5, kappa1, 0.3, 0.7), "w/ E, infop = 0.3, p = 5", "Opinion", "Number of Agents", 1000, N, false);
-%gen_plot("hist", false, 3, run_simulation("with", create(N), Tg, 1000, N, u, mu, n0, 10, kappa0, n1, 10, kappa1, 0.3, 0.7), "w/ E, infop = 0.3, p = 10", "Opinion", "Number of Agents", 1000, N, false);
-%gen_plot("hist", false, 3, run_simulation("with", create(N), Tg, 1000, N, u, mu, n0, 20, kappa0, n1, 20, kappa1, 0.3, 0.7), "w/ E, infop = 0.3, p = 20", "Opinion", "Number of Agents", 1000, N, false);
+gen_plot("hist", false, 3, run_simulation("with", create(N), Tg, 1000, N, u, mu, n0, 5, kappa0, n1, 5, kappa1, 0.3, 0.7), "w/ E, infop = 0.3, p = 5", "Opinion", "Number of Agents", 1000, N, false);
+gen_plot("hist", false, 3, run_simulation("with", create(N), Tg, 1000, N, u, mu, n0, 10, kappa0, n1, 10, kappa1, 0.3, 0.7), "w/ E, infop = 0.3, p = 10", "Opinion", "Number of Agents", 1000, N, false);
+gen_plot("hist", false, 3, run_simulation("with", create(N), Tg, 1000, N, u, mu, n0, 20, kappa0, n1, 20, kappa1, 0.3, 0.7), "w/ E, infop = 0.3, p = 20", "Opinion", "Number of Agents", 1000, N, false);
 
 % infop = 0.5
-%gen_plot("hist", false, 3, run_simulation("with", create(N), Tg, 1000, N, u, mu, n0, 5, kappa0, n1, 5, kappa1, 0.5, 0.5), "w/ E, infop = 0.5, p = 5", "Opinion", "Number of Agents", 1000, N, false);
-%gen_plot("hist", false, 3, run_simulation("with", create(N), Tg, 1000, N, u, mu, n0, 10, kappa0, n1, 10, kappa1, 0.5, 0.5), "w/ E, infop = 0.5, p = 10", "Opinion", "Number of Agents", 1000, N, false);
-%gen_plot("hist", false, 3, run_simulation("with", create(N), Tg, 1000, N, u, mu, n0, 20, kappa0, n1, 20, kappa1, 0.5, 0.5), "w/ E, infop = 0.5, p = 20", "Opinion", "Number of Agents", 1000, N, false);
+gen_plot("hist", false, 3, run_simulation("with", create(N), Tg, 1000, N, u, mu, n0, 5, kappa0, n1, 5, kappa1, 0.5, 0.5), "w/ E, infop = 0.5, p = 5", "Opinion", "Number of Agents", 1000, N, false);
+gen_plot("hist", false, 3, run_simulation("with", create(N), Tg, 1000, N, u, mu, n0, 10, kappa0, n1, 10, kappa1, 0.5, 0.5), "w/ E, infop = 0.5, p = 10", "Opinion", "Number of Agents", 1000, N, false);
+gen_plot("hist", false, 3, run_simulation("with", create(N), Tg, 1000, N, u, mu, n0, 20, kappa0, n1, 20, kappa1, 0.5, 0.5), "w/ E, infop = 0.5, p = 20", "Opinion", "Number of Agents", 1000, N, false);
 
 %% Figure 7
-%gen_plot_interval("line", "% of extreme opinions", "p", "Percentage", true, "with", "p", create(N), Tg, 10000, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, infop0, infop1);
+gen_plot_interval("line", "% of extreme opinions", "p", "Percentage", true, "with", "p", create(N), Tg, 10000, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, infop0, infop1);
 
 
 
@@ -131,9 +131,11 @@ function [] = gen_plot(plot_type, slider_bool, number_of_plots, data, plot_name,
     title({' ', plot_name, ' '}, 'FontSize', 25);
     xlabel(x_axis, 'FontSize', 25);
     ylabel(y_axis, 'FontSize', 25);
+    % because data is lost for large Ts and log scaling
     if T < 400
         set(gca,'yscale','log');
     end
+    % save to file with unique name
     if save
        format shortg;
        c = clock;
@@ -201,13 +203,16 @@ function [] = gen_plot_interval(plot_type, plot_name, x_axis, y_axis, save, simt
     xlabel(x_axis, 'FontSize', 25);
     ylabel(y_axis, 'FontSize', 25);
     if param == "u"
+        % set x axis labelling for u
         xticks([0 10 20 30 40 50 60 70 80 90 100]);
         xticklabels({'0','0.1','0.2','0.3','0.4','0.5','0.6', '0.7', '0.8', '0.9', '1'});
     elseif param == "mu"
+        % set x axis labelling for mu
         xticks([0 10 20 30 40 50]);
         xticklabels({'0','0.1','0.2','0.3','0.4','0.5'});
     end
     disp("Finished!");
+    % save file with unique name
     if save
        format shortg;
        c = clock;
@@ -261,19 +266,6 @@ function [op] = create(N)
 
     % uniform distribution
     op = rand(1,N);
-
-    % Normal distribution with mean=0.5 and sigma=1
-    %{
-    op = normrnd(0.5, 1, N, 1);
-
-    % We want to guarantee that all opinions are in [0,1]
-    for i = 1:N
-        while (op(i) > 1 || op(i) < 0)
-            op(i) = normrnd(0.5, 1);
-        end
-        %disp(op(i));
-    end
-    %}
 end
 
 
@@ -310,7 +302,10 @@ function [simulation] = with(op, T, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, in
     simulation = zeros(T, N);
     neff0 = p0 * n0;
     neff1 = p1 * n1;
+    
+    % add start state to data matrix
     simulation(1,:) = op;
+    
     %% A world with extremists
     for t = 1:T+1
         % For timestep t; the SocietyAgents play their game
@@ -347,6 +342,7 @@ function [simulation] = with(op, T, N, u, mu, n0, p0, kappa0, n1, p1, kappa1, in
             end
         end
         
+        % add current state to data matrix
         simulation(t+1, :) = op;
     end
 end
@@ -377,10 +373,12 @@ end
 function [perc] = countPercentage(lower, upper, op, N)
   counter = 0;
   for i = 1:N
+      % add to counter if opinion in interval
        if (op(i) >= lower && op(i) <= upper) || (op(i) >= 1-upper && op(i) <= 1-lower)
            counter = counter + 1;
        end
   end
+  % calculate percentage
   perc = counter/N*100;
 end
 
@@ -390,12 +388,14 @@ function [] = createMovie(data, title, T)
     vidObj = VideoWriter(title,'MPEG-4');
     vidObj.FrameRate = 20;
     open(vidObj);
+    % iterate through data along T
     for t = 1:T
         histogram(data(t,:), edges, 'DisplayName', ['T = ', num2str(T)]);
         title({' ', plot_name, ' '}, 'FontSize', 25);
         xlabel(x_axis, 'FontSize', 25);
         ylabel(y_axis, 'FontSize', 25);
         pause(0.005);
+        % draw plot and frame
         drawnow;
         F = getframe(FIG);
         writeVideo(vidObj,F);

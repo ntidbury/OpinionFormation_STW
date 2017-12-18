@@ -267,20 +267,16 @@ Figure \ref{fig:varynconv} shows the result of the described measurement. For $p
 The interesting numbers are $p = 50$ and $p = 250$. They define the range in which the extremists are able to use $\mu$ to their advantage and are strong enough to collect all agents even if they cannot reach all agents directly (see chapter 4.2).
 
 
-\section{Discussion}
+\section{Summary and Discussion}
 The challenge of the simulation was to keep track of which parameters were to be varied in the society with extremists compared to the society wihtout. We managed to reproduce the effects explained in the paper. The fact that Laguna found converging opinions for $u>0.3$ and we found converging opinions already for $u>0.24$ is unexplained. However, we assumed that we implemented the code like Laguna.
 
-It was very interesting to see the change of the parameter $\mu$ in the second society compared to the first. It was further interesting to see that a variation of the interval of influence $infop$ did not make a big difference on the result up to the point where $infop$ comes close to the value 0.5. In chapter 5.3, we also found a interval for strength of the extremists. If the number of influencable agents was increased, first the proportion of extreme opinions increased linearly, then jumped to 100$\%$ and decreased again for a very high number of influencable agents.\\*
+It was very interesting to see the change of the parameter $\mu$ in the second society compared to the first. It was further interesting to see that a variation of the interval of influence $infop$ did not make a big difference on the result up to the point where $infop$ comes close to the value 0.5. In chapter 5.3, we also found a interval for strength of the extremists. If the number of influencable agents was increased, first the proportion of extreme opinions increased linearly, then jumped to 100$\%$ and decreased again for a very high number of influencable agents due to bridge effects.\\*
 
 
-\section{Summary and Outlook}
-Until now we considered only symmetric random distributions and symmetric distribution of extremists. We could have also 
-What is gonna happen if this will be asymmetric? What would be the interpretation? What is interesting in these cases?
-
-
-If we do no Gaussian distribtion: a normal distribution is a sensible alternative opinion distribution where 0.5 is the main stream opinion and other opinions are spreaded around the main stream distribution. Sigma would be measure for 'how far' the other opinions are spreaded from the main stream opinion.
-
-Higher N corresponds to other bridge effects. (see chapter 5.3)
+\section{Outlook}
+Up to now we considered only symmetric random distributions and symmetric distribution of extremists. We could have also looked at asymmetric distributions and look at these results. \\*
+One could further look at a Gaussian instead of a uniform distribution of opinions, which would strengthen the average opinion. It would be a  sensible alternative opinion distribution where 0.5 is the main stream opinion and other opinions are spread around the main stream distribution. Sigma would be measure for 'how far' the other opinions are spreaded from the main stream opinion. \\*
+It would further be interesting to vary N to see other bridge effects as described in chapter 5.3 or the number of time steps T needed to reach the steady state for different settings of parameters.
 
 
 %\section{References}

@@ -132,7 +132,7 @@ Basing on the setting of society of interacting agents with the three parameters
 This is implemented with the following parameters for each of the two sides: At each time step the $n$ extreme opinion individuals can persuade $p$ other agents by a probability of success of $\kappa$ each, but again only within a threshold of communication, this time called $infop$. \\*
 We seemingly add four new parameters. However, in fact there are some correlations.
 First, we have an effective number of persuaded people in each time step of $n_{eff} = n \cdot p$ that can be united to one parameter. Secondly, this again can be united to $n_{conv}$ = $\kappa \cdot n_{eff}$, under the constraint that we have large numbers such that statistical averages take place. \\*
-In the end we have only two additional parameters. $n_{conv}$, which defines the amount of influenced people and $infop$ which defines the range of influence and remained as before.
+In the end we have only two additional parameters. $n_{conv}$, which defines the amount of convinced people and $infop$ which defines the range of influence and remained as before.
 
 \section{A world without extremists}
 For deeper understanding and for having references to later cases we started the simulations with a society without extremists. Therefore, we coded situations as given in \cite{Minor} in order to reproduce their results.
@@ -155,27 +155,31 @@ The effect is shown in figures \ref{fig:muwithoutextremists}. We investigated th
 
 
 \subsection{Cluster building}
-According to \cite{Minor}, such a society of N agents with random uniform distributed opinions $x_i$ in [0,1] will converge to a common opinion around 0.5 if the communicating interval $u$ of agents communicating with each other is big enough, more precise if $u>0.3$. This was repeated and shown in figure \ref{fig:uwithoutextremists}.
+According to \cite{Minor}, such a society of N agents with random uniform distributed opinions $x_i$ in [0,1] will converge to a common opinion around 0.5 if the communicating interval $u$ of agents communicating with each other is big enough, more precise if $u>0.3$. This was repeated and shown in figure \ref{fig:uwithoutextremists}. \\
 
 \begin{figure}[!htb]
 \center
-  \includegraphics[width=0.7\linewidth]{gen_plot_intervall_2017121713504989561e+01.png}
-  \caption{Percentage of the society fraction of all of opinion around central cluster}
+  \includegraphics[width=0.7\linewidth]{gen_plot_intervall_2017121418231461579e+01.png}
+  \caption{Percentage of central cluster when varying $\mu$}
   \label{fig:uwithoutextremists}
 \end{figure}
 
+In case $\mu = 0$, there is no opinion change between the agents and the uniform distribution of the opinions gives us the percentage $\frac{|0.45-0.50|}{1} = 10\%$. For values of $\mu$ between 0.1 and 0.2 we see that almost no opinion are between 0.45 and 0.5. This corresponds to the fact that the opinion converge against two opinions that are around 0.25 and 0.75. If $\mu > 0.28$ we see almost 100\% in this cluster. This is the main result of this chapter and is defined as the convergence against a common opinion around 0.5.
+
 \section{A world with extremists}
 The society model described above is being extended to a society with extreme opinion individuals who can influence the agents. We carry on to vary different parameters in this society model.
-\subsection{Varying weight \texorpdfstring{$\mu$}{TEXT}}
-In the case of a society without extremists, $\mu$ was just a measure of convergence, but did not have an influence on the result. So if a small $\mu$ was chosen, we number of timesteps T could be increased accordingly to get  to the same result of convergence (See Chapter 4.1). \\*
-While varying the values of $\mu$ and T in a society with extremists, $\mu$ does not only influence the convergence, but also the spread of opinions. If a small $\mu$ is chosen, thus the natural convergence is slow, this leads to more agents with extreme opinions, compared to a high $\mu$. \\*
-This can be explained as follows: If the natural convergence is slow, more time steps are needed to get to the stationary state. But the extremists influence is independent of $\mu$. Therefore, if the natural influence is small, the extremists have more time to grasp agents with opinions in the interval accessible to the the agents who could pull them to the average opinion cluster at $x$ = 0.5. \\*
-Plot with small mu (resp big T) and big mu (resp small T) to show that effect. The extremists should be strong (means infop for example around 0.4 and big value for $n_{conv}$)
 
-\subsection{Varying the extremists interval of influence \texorpdfstring{$infop$}{TEXT}}
-Next, the interval of influence is varied from 0 to 0.5 symmetrically. The results can be seen in figure \ref{fig:varinfop}.\\*
-plot: histogram for with and without for increasing T \\*
-Question: For which T do we reach a stable state? When do we lose the convergence around 0.5? - I think the convergence is highly dependent on the infop factor! (similar to u since infop is kind of u for the extremists...)
+\subsection{The "new" parameter \texorpdfstring{$\mu$}{TEXT}}
+In the case of a society without extremists, $\mu$ was a measure of convergence. However, it did not have an influence on the final result. If a small $\mu$ was chosen, the number of time steps T could be increased accordingly to get the same result of convergence (See Chapter 4.1). \\*
+While varying the values of $\mu$ in a society with extremists, $\mu$ does not only influence the speed of convergence, but also the spread of opinions. If a small $\mu$ is chosen, thus the natural convergence is slow, this leads to more agents with extreme opinions, compared to a high $\mu$. \\*
+This can be explained as follows: If the natural convergence is slow, more time steps are needed to get to the stationary state. But the extremists influence is independent of $\mu$. Therefore, if the natural influence is small, the extremists have more time to grasp agents with opinions in the interval accessible to the the agents who could pull them to the average opinion cluster at $x$ = 0.5. \\*
+% Plot with small mu (resp big T) and big mu (resp small T) to show that effect. The extremists should be strong (means infop for example around 0.4 and big value for $n_{conv}$)
+
+\subsection{The interval of influence}
+Next, the interval of influence $infop$ is varied. Concretely, the range of influenced people by the extremists with opinion $x=0$ is in [0, infop] and by the extremists with opinion $x=1$ is in [1-infop, 1]. We vary infop from 0 to 0.5. 
+
+The results can be seen in figure \ref{fig:varinfop}. We see that the convergence with this set of parameters is amazingly stable until we come close to $inop = 0.5$. The number of convinced agents, defined by $n_{conv}$ and controlled by p, has a small influence. 
+...
 
 \begin{figure}[!htb]
 \begin{subfigure}[t]{\textwidth}
@@ -227,7 +231,7 @@ Question: For which T do we reach a stable state? When do we lose the convergenc
 \endminipage
 \end{subfigure}
 
-\caption{Opinion spread for different $infop$ for p = 5, 10 and 20 (from left to right)}
+\caption{Opinion spread for different $infop$ for p = 5, 10 and 20 (from left to right). We fixed $N = 1000$, $\mu = 0.3$ and $u = 0.32$ what converges fast against 0.5 in the case without extremists.}
 \label{fig:varinfop}
 \end{figure}
 

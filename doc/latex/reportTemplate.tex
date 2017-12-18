@@ -205,7 +205,7 @@ This can be explained as follows: If the natural convergence is slow, more time 
 \end{figure}
 
 \subsection{The interval of influence}
-Next, the interval of influence $infop$ is varied. Concretely, the range of influenced people by the extremists with opinion $x=0$ is in [0, infop] and by the extremists with opinion $x=1$ is in [1-infop, 1]. We vary infop from 0 to 0.5. 
+Next, the interval of influence $infop$ is varied. Concretely, the range of people influenced by the extremists with opinion $x=0$ is in [0, infop] and by the extremists with opinion $x=1$ is in [1-infop, 1]. We vary infop from 0 to 0.5. 
 
 The results can be seen in figure \ref{fig:varinfop}. We see that the convergence with this set of parameters is amazingly stable until we come close to $infop = 0.5$. Further, the number of convinced agents, defined by $n_{conv}$ and controlled by varying p, has a small influence for small $infop$, but at exactly 0.5 a higher $p$ leads to more extremists.
 
@@ -277,6 +277,13 @@ The interesting numbers are $p = 50$ and $p = 250$. They define the range in whi
 a typical discussion... what was good/bad? Problems? Interpretation of our simulation results? Limits of the model?
 
 Our result for the convergence of the opinions is u>0.28. In the paper it was u>0.3.
+
+
+
+The challenge of the simulation was to keep track of which parameters were to be varied in the society with extremists compared to the society wihtout. It was very interesting to see the change of the parameter $\mu$ in the second society compared to the first. It was further intersting to see that a variation of the interval of influence infop did not make a big difference on the result up to the point where $infop$ reaches 0.5. \\*
+
+Further… 5.4
+We could have investigated the time steps $T_{max}$ needed to get to a steady state for different sets of parameters. This would have made the build up of the simulations a little easier.
 
 \section{Summary and Outlook}
 Until now we considered only symmetric random distributions and symmetric distribution of extremists. What is gonna happen if this will be asymmetric? What would be the interpretation? What is interesting in these cases?

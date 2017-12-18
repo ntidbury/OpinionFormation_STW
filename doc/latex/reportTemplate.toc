@@ -8,8 +8,7 @@
 \contentsline {subsection}{\numberline {4.2}Cluster building}{7}{subsection.4.2}
 \contentsline {section}{\numberline {5}A world with extremists}{9}{section.5}
 \contentsline {subsection}{\numberline {5.1}The "new" parameter $\mu $}{9}{subsection.5.1}
-\contentsline {subsection}{\numberline {5.2}The interval of influence}{9}{subsection.5.2}
-\contentsline {subsection}{\numberline {5.3}Varying the number of convinced agents $n_{conv}$}{10}{subsection.5.3}
-\contentsline {subsection}{\numberline {5.4}Stability of the average opinion}{11}{subsection.5.4}
-\contentsline {section}{\numberline {6}Discussion}{11}{section.6}
+\contentsline {subsection}{\numberline {5.2}The interval of influence}{11}{subsection.5.2}
+\contentsline {subsection}{\numberline {5.3}The power of convincing}{12}{subsection.5.3}
+\contentsline {section}{\numberline {6}Discussion}{13}{section.6}
 \contentsline {section}{\numberline {7}Summary and Outlook}{13}{section.7}
